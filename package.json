@@ -1,0 +1,24 @@
+{
+  "name": "@coorpacademy/eslint-plugin-coorpacademy",
+  "version": "1.0.0",
+  "description": "Common ESLint config for Coorpacademy projects",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-plugin-ava": "^1.4.1",
+    "eslint-plugin-jsx": "0.0.2",
+    "eslint-plugin-mocha-only": "0.0.3"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoorpAcademy/eslint-plugin-coorpacademy.git"
+  },
+  "author": "Jeroen Engels <jfm.engels@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/issues"
+  },
+  "homepage": "https://github.com/CoorpAcademy/eslint-plugin-coorpacademy#readme"
+}
