@@ -27,8 +27,9 @@ This package provides multiple configuration for different purposes, that you ca
 ```
 
 Available rule sets are:
-- [core](./config/core.js): Shared ESLint rules
 - [ava](./config/ava.js): Rules for when using AVA
+- [core](./config/core.js): Shared ESLint rules
 - [es20XX](./config/es20XX.js): Rules for when using ES2015+ syntax
 - [jsx](./config/jsx.js): Rules for when using JSX
+- [lodash-fp](./config/lodash-fp.js): Rules for when using Lodash's FP flavor
 - [mocha](./config/mocha.js): Rules for when using Mocha
