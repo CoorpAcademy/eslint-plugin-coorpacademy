@@ -1,9 +1,10 @@
 {
   "name": "@coorpacademy/eslint-plugin-coorpacademy",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Common ESLint config for Coorpacademy projects",
   "main": "index.js",
   "dependencies": {
+    "babel-eslint": "^6.0.4",
     "eslint-plugin-ava": "^1.4.1",
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-mocha-only": "0.0.3"
@@ -11,6 +12,10 @@
   "scripts": {
     "test": "node index.js"
   },
+  "files": [
+    "index.js",
+    "config"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CoorpAcademy/eslint-plugin-coorpacademy.git"

@@ -4,12 +4,8 @@ module.exports = {
     parserOptions: {
         sourceType: 'module'
     },
-    // plugins: [
-    //   '@coorpacademy/eslint-plugin-coorpacademy'
-    // ]
     rules: {
         // WANTS but not currently respected not in coorpacademy/CoorpAcademy:
-        // - indent
         // - func-names?
         // - consistent-return?
         // - no-else-return
@@ -22,7 +18,6 @@ module.exports = {
         // - strict
         // - valid-jsdoc
         // - vars-on-top
-        'coorpacademy/yep': 'error',
         'accessor-pairs': 'off',
         'array-bracket-spacing': ['error', 'never'],
         'array-callback-return': 'error',
@@ -57,7 +52,7 @@ module.exports = {
         'id-blacklist': 'off',
         'id-length': 'off',
         'id-match': 'off',
-        'indent': 'off',
+        'indent': ['error', 2],
         'init-declarations': 'off',
         'jsx-quotes': 'off',
         'key-spacing': 'error',
