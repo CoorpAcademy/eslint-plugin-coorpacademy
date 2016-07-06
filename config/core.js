@@ -4,7 +4,14 @@ module.exports = {
     parserOptions: {
         sourceType: 'module'
     },
+    plugins: [
+        'promise'
+    ],
     rules: {
+        'promise/always-return': 'error',
+        'promise/catch-or-return': 'error',
+        'promise/no-native': 'error',
+        'promise/param-names': 'error',
         // WANTS but not currently respected not in coorpacademy/CoorpAcademy:
         // - func-names?
         // - consistent-return?
