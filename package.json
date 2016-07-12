@@ -13,7 +13,16 @@
   "peerDependencies": {
     "eslint": ">=3"
   },
+  "devDependencies": {
+    "eslint-find-rules": "^1.13.0"
+  },
   "scripts": {
+    "test": "node index.js",
+    "find-missing": "npm run fm-core && npm run fm-ava && npm run fm-lodash-fp && npm run fm-mocha",
+    "fm-core": "eslint-find-rules -v --unused ./config/core.js",
+    "fm-ava": "eslint-find-rules -v --unused --no-core ./config/ava.js",
+    "fm-lodash-fp": "eslint-find-rules -v --unused --no-core ./config/lodash-fp.js",
+    "fm-mocha": "eslint-find-rules -v --unused --no-core ./config/mocha.js",
     "test": "node index.js"
   },
   "engines": {
