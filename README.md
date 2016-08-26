@@ -1,5 +1,8 @@
 # Coorpacademy ESLint plugin
 
+![npm](https://img.shields.io/npm/v/@coorpacademy/eslint-plugin-coorpacademy.svg?maxAge=2592000)
+![travis](https://api.travis-ci.org/CoorpAcademy/eslint-plugin-coorpacademy.svg)
+
 CoorpAcademy's ESLint rules and configs.
 
 ## Installation
