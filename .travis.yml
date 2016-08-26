@@ -1,0 +1,22 @@
+sudo: false
+language: node_js
+node_js:
+- '6'
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: npm
+  email: dev@coorpacademy.com
+  api_key:
+    secure: T1gCbS315SfJAAalFizXCMkbzYpLBLflmDZVumZfPoWsxYKQd+tFjaJmwiu7/hSfxXGD2PruRaf25NZIhRTxLdWWdvc/UVVkxX291iGDLf7a0LjRbboCZpJiURMc+vU3rVxtNlS1VW6z8wPDdblcyOqQFy7vXPd1/Y+l7n8u6AarWDbFXDwyiJ43TJVuESO8b6rxbMObwV0odNgfzT+edB2DKlxt19d547qnzmdyZQajUuRj34CtzVjF25uyW5lqEyqmPK+EIGgSqo5TPFnJvCt5/MoTt7UjV6STcJuhhdOsstjJY4vyk/RzmqUsOxY89iMXXjxpy4m06BZ1QCsbxg+wPtigYk6XMvUEk5ec0hhaq5TSG8ta+OI8eYlA+Zo8k73JvMcZJzr3YMrvz38G2y40tuA58lkietSwf/fOKtPUUM3x+y63DD/Pwmq3VPyKJVN8DncjZf+Rp00J7QEu10OuLO48oEaSv/5tdGHSLMEFYIRjdRTwKMqB6wE4Wm08aVv6QimAeFxnjvOuzmR9LixLkoXZSKlNAS2Hx2qZ8DHAJwN8zzziBPlHwLdxDJO3YSepYwP4AUUt5ppe9xhbOCfqqazHWkomGWPOipl6r47Y+f8cVHVW7kDlea/eEEezFG7vSiWAZCRFgBRT/9NB/L0+TRl6UpOuW8A/etBh+5E=
+  on:
+    tags: true
+env:
+- CXX=g++-4.8
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
