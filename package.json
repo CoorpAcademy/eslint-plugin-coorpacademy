@@ -6,6 +6,7 @@
   "dependencies": {
     "babel-eslint": "^6.0.4",
     "eslint-plugin-ava": "^3.0.0",
+    "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-lodash-fp": "^2.0.1",
     "eslint-plugin-mocha": "^4.5.1",
@@ -23,8 +24,7 @@
     "fm-core": "eslint-find-rules -v --unused ./config/core.js",
     "fm-ava": "eslint-find-rules -v --unused --no-core ./config/ava.js",
     "fm-lodash-fp": "eslint-find-rules -v --unused --no-core ./config/lodash-fp.js",
-    "fm-mocha": "eslint-find-rules -v --unused --no-core ./config/mocha.js",
-    "test": "node index.js"
+    "fm-mocha": "eslint-find-rules -v --unused --no-core ./config/mocha.js"
   },
   "engines": {
     "node": ">=4.0.0"

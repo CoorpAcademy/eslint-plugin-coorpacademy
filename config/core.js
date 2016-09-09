@@ -5,7 +5,8 @@ module.exports = {
         sourceType: 'module'
     },
     plugins: [
-        'promise'
+        'promise',
+        'import'
     ],
     rules: {
         'promise/always-return': 'error',
@@ -13,6 +14,28 @@ module.exports = {
         'promise/catch-or-return': 'error',
         'promise/no-native': 'error',
         'promise/param-names': 'error',
+
+        'import/default': 'error',
+        'import/export': 'error',
+        'import/extensions': 'error',
+        'import/imports-first': 'error',
+        'import/named': 'error',
+        'import/namespace': 'error',
+        'import/newline-after-import': 'error',
+        'import/no-amd': 'error',
+        'import/no-commonjs': 'off',
+        'import/no-deprecated': 'error',
+        'import/no-duplicates': 'error',
+        'import/no-extraneous-dependencies': 'error',
+        'import/no-mutable-exports': 'error',
+        'import/no-named-as-default-member': 'error',
+        'import/no-named-as-default': 'error',
+        'import/no-namespace': 'off',
+        'import/no-nodejs-modules': 'off',
+        'import/no-restricted-paths': 'off',
+        'import/no-unresolved': 'error',
+        'import/order': ['error', {"newlines-between": "never"}],
+        'import/prefer-default-export': 'error',
 
         'accessor-pairs': 'off',
         'array-bracket-spacing': ['error', 'never'],
