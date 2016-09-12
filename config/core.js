@@ -5,11 +5,30 @@ module.exports = {
         sourceType: 'module'
     },
     plugins: [
-        'promise',
+        'fp',
         'import',
+        'promise',
         'xo'
     ],
     rules: {
+        'fp/no-arguments': 'off',
+        'fp/no-class': 'error',
+        'fp/no-delete': 'off',
+        'fp/no-events': 'error',
+        'fp/no-get-set': 'error',
+        'fp/no-let': 'off',
+        'fp/no-loops': 'error',
+        'fp/no-mutating-assign': 'off',
+        'fp/no-mutating-methods': 'off',
+        'fp/no-mutation': 'off',
+        'fp/no-nil': 'off',
+        'fp/no-proxy': 'error',
+        'fp/no-rest-parameters': 'off',
+        'fp/no-this': 'off',
+        'fp/no-throw': 'off',
+        'fp/no-unused-expression': 'off',
+        'fp/no-valueof-field': 'error',
+
         'promise/always-return': 'error',
         'promise/always-catch': 'off',
         'promise/catch-or-return': 'error',
@@ -35,7 +54,7 @@ module.exports = {
         'import/no-nodejs-modules': 'off',
         'import/no-restricted-paths': 'off',
         'import/no-unresolved': 'error',
-        'import/order': ['error', {"newlines-between": "never"}],
+        'import/order': ['error', {'newlines-between': 'never'}],
         'import/prefer-default-export': 'error',
 
         'xo/catch-error-name': 'off',
