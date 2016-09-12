@@ -117,8 +117,10 @@ module.exports = {
                 'default': { 'after': false }
             }
         }],
+        'line-comment-position': 'off',
         'linebreak-style': 'error',
         'lines-around-comment': 'off',
+        'lines-around-directive': ['error', {'before': 'never', 'after': 'always'}],
         'max-depth': ['error', 4],
         'max-len': ['error', 120],
         'max-lines': 'off',
@@ -218,6 +220,7 @@ module.exports = {
         'no-restricted-globals': 'off',
         'no-restricted-imports': 'off',
         'no-restricted-modules': 'off',
+        'no-restricted-properties': 'off',
         'no-restricted-syntax': 'off',
         'no-return-assign': 'error',
         'no-script-url': 'error',
@@ -271,6 +274,7 @@ module.exports = {
         'padded-blocks': ['error', 'never'],
         'prefer-arrow-callback': 'off',
         'prefer-const': 'off',
+        'prefer-numeric-literals': 'error',
         'prefer-reflect': 'off',
         'prefer-rest-params': 'off',
         'prefer-spread': 'off',
