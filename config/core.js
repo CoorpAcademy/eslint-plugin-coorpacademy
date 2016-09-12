@@ -6,7 +6,8 @@ module.exports = {
     },
     plugins: [
         'promise',
-        'import'
+        'import',
+        'xo'
     ],
     rules: {
         'promise/always-return': 'error',
@@ -36,6 +37,13 @@ module.exports = {
         'import/no-unresolved': 'error',
         'import/order': ['error', {"newlines-between": "never"}],
         'import/prefer-default-export': 'error',
+
+        'xo/catch-error-name': 'off',
+        'xo/explicit-length-check': 'error',
+        'xo/filename-case': ['error', {'case': 'kebabCase'}],
+        'xo/no-abusive-eslint-disable': 'error',
+        'xo/no-process-exit': 'error',
+        'xo/throw-new-error': 'error',
 
         'accessor-pairs': 'off',
         'array-bracket-spacing': ['error', 'never'],
