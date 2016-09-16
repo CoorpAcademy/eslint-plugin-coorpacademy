@@ -19,7 +19,8 @@
     "eslint": ">=3"
   },
   "devDependencies": {
-    "eslint-find-rules": "^1.13.0"
+    "eslint": "^3.5.0",
+    "eslint-find-rules": "^1.13.1"
   },
   "scripts": {
     "test": "node index.js",
