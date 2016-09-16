@@ -6,12 +6,31 @@
   "dependencies": {
     "babel-eslint": "^6.0.4",
     "eslint-plugin-ava": "^3.0.0",
+    "eslint-plugin-fp": "^2.2.0",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-lodash-fp": "^2.0.1",
-    "eslint-plugin-mocha-only": "0.0.3"
+    "eslint-plugin-mocha": "^4.5.1",
+    "eslint-plugin-promise": "^1.3.2",
+    "eslint-plugin-xo": "^1.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=3"
+  },
+  "devDependencies": {
+    "eslint-find-rules": "^1.13.0"
   },
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "find-missing": "npm run fm-core && npm run fm-ava && npm run fm-lodash-fp && npm run fm-mocha",
+    "fm-core": "eslint-find-rules -v --unused ./config/core.js",
+    "fm-ava": "eslint-find-rules -v --unused --no-core ./config/ava.js",
+    "fm-lodash-fp": "eslint-find-rules -v --unused --no-core ./config/lodash-fp.js",
+    "fm-mocha": "eslint-find-rules -v --unused --no-core ./config/mocha.js"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   },
   "files": [
     "index.js",
