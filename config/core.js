@@ -7,6 +7,7 @@ module.exports = {
     plugins: [
         'fp',
         'import',
+        'json',
         'promise',
         'xo'
     ],
