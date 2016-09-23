@@ -311,5 +311,8 @@ module.exports = {
         'wrap-regex': 'off',
         'yield-star-spacing': 'off',
         'yoda': ['error', 'never', { 'exceptRange': true }],
+    },
+    "settings": {
+      "import/ignore": ["node_modules", "\\.css$"]
     }
 };
