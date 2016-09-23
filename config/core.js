@@ -9,7 +9,7 @@ module.exports = {
         'import',
         'json',
         'promise',
-        'xo'
+        'unicorn'
     ],
     rules: {
         'fp/no-arguments': 'off',
@@ -60,12 +60,12 @@ module.exports = {
         'import/order': ['error', {'newlines-between': 'never'}],
         'import/prefer-default-export': 'error',
 
-        'xo/catch-error-name': 'off',
-        'xo/explicit-length-check': 'error',
-        'xo/filename-case': ['error', {'case': 'kebabCase'}],
-        'xo/no-abusive-eslint-disable': 'error',
-        'xo/no-process-exit': 'error',
-        'xo/throw-new-error': 'error',
+        'unicorn/catch-error-name': 'off',
+        'unicorn/explicit-length-check': 'error',
+        'unicorn/filename-case': ['error', {'case': 'kebabCase'}],
+        'unicorn/no-abusive-eslint-disable': 'error',
+        'unicorn/no-process-exit': 'error',
+        'unicorn/throw-new-error': 'error',
 
         'accessor-pairs': 'off',
         'array-bracket-spacing': ['error', 'never'],
