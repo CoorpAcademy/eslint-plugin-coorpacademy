@@ -4,7 +4,7 @@
   "description": "Common ESLint config for Coorpacademy projects",
   "main": "index.js",
   "dependencies": {
-    "babel-eslint": "^6.0.4",
+    "babel-eslint": "^7.0.0",
     "eslint-plugin-ava": "^3.0.0",
     "eslint-plugin-fp": "^2.2.0",
     "eslint-plugin-import": "^1.16.0",
