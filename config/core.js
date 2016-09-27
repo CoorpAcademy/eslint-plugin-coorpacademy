@@ -39,6 +39,7 @@ module.exports = {
         'import/default': 'error',
         'import/export': 'error',
         'import/extensions': 'error',
+        'import/first': 'error',
         'import/imports-first': 'error',
         'import/max-dependencies': 'off',
         'import/named': 'error',
@@ -47,20 +48,23 @@ module.exports = {
         'import/no-absolute-path': 'error',
         'import/no-amd': 'error',
         'import/no-commonjs': 'off',
-        'import/no-internal-modules': 'off',
         'import/no-deprecated': 'error',
         'import/no-duplicates': 'error',
         'import/no-dynamic-require': 'error',
         'import/no-extraneous-dependencies': 'error',
+        'import/no-internal-modules': 'off',
         'import/no-mutable-exports': 'error',
         'import/no-named-as-default-member': 'error',
         'import/no-named-as-default': 'error',
         'import/no-namespace': 'off',
         'import/no-nodejs-modules': 'off',
         'import/no-restricted-paths': 'off',
+        'import/no-unassigned-import': 'off',
         'import/no-unresolved': 'error',
-        'import/order': ['error', {'newlines-between': 'never'}],
+        'import/no-webpack-loader-syntax': 'error',
+        'import/order': ['error', {'newlines-between': 'ignore'}],
         'import/prefer-default-export': 'error',
+        'import/unambiguous': 'off',
 
         'unicorn/catch-error-name': 'off',
         'unicorn/explicit-length-check': 'error',
@@ -314,7 +318,7 @@ module.exports = {
         'yield-star-spacing': 'off',
         'yoda': ['error', 'never', { 'exceptRange': true }],
     },
-    "settings": {
-      "import/ignore": ["node_modules", "\\.css$"]
+    'settings': {
+      'import/ignore': ['node_modules', '\\.css$']
     }
 };
