@@ -164,7 +164,7 @@ module.exports = {
         'no-dupe-class-members': 'error',
         'no-dupe-keys': 'error',
         'no-duplicate-case': 'error',
-        'no-duplicate-imports': 'error',
+        'no-duplicate-imports': 'off',
         'no-else-return': 'off',
         'no-empty-character-class': 'error',
         'no-empty-function': 'off',
