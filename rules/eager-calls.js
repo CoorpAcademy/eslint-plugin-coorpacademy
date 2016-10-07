@@ -8,6 +8,19 @@ function getVariablesInScope(context) {
     .map(ref => ref.name);
 }
 
+function expressionUsesVariables(callee, names) {
+  switch (callee.type) {
+    case 'CallExpression':
+      return true;
+    case 'MemberExpression':
+      return expressionUsesVariables(callee.object, names);
+    case 'Identifier':
+      return names.includes(callee.name);
+    default:
+      return false;
+  }
+}
+
 function create(context) {
   let scopeStack = [];
 
@@ -22,9 +35,7 @@ function create(context) {
     CallExpression(node) {
       const argNames = getNames(node.arguments);
       const currentBlockScopeVariables = scopeStack[0];
-      if (node.callee.type === 'CallExpression' ||
-        (node.callee.type === 'Identifier' && currentBlockScopeVariables.includes(node.callee.name))
-      ) {
+      if (expressionUsesVariables(node.callee, currentBlockScopeVariables)) {
         return;
       }
       if (scopeStack.length > 1 && argNames.every(name => !currentBlockScopeVariables.includes(name))) {

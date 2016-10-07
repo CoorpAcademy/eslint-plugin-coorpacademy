@@ -43,6 +43,7 @@ ruleTester.run('eager-calls', rule, {
     `,
     `const foo = (fn, a) => fn(a);`,
     `const foo = (a) => (fn) => fn(a);`,
+    `const foo = (a) => (b) => b.fn(a);`,
     `
     const createItem = ({h}, options) => (props, children) => children;
     export default (treant, options) => {
@@ -78,6 +79,18 @@ ruleTester.run('eager-calls', rule, {
           return () => bar(b);
         }
       `,
+      errors
+    },
+    {
+      code: `const foo = (a, c) => (b) => a.fn(c);`,
+      errors
+    },
+    {
+      code: `const foo = (a, c) => (b) => a.b.fn(c);`,
+      errors
+    },
+    {
+      code: `const foo = (a, c) => (b) => a.d.fn(c);`,
       errors
     },
     {
