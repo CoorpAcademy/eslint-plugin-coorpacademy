@@ -10,9 +10,9 @@ const ruleTester = new RuleTester({
   }
 });
 
-const errors = [{
+const error = {
   message: 'Call could be made in a parent function.'
-}]
+};
 
 ruleTester.run('eager-calls', rule, {
   valid: [
@@ -47,6 +47,9 @@ ruleTester.run('eager-calls', rule, {
     `const foo = (a, c) => (b) => a.d[b].fn(c);`,
     `const foo = (a, c) => (b) => b.d[a].fn(c);`,
     `const foo = (a, c) => (b) => b[b[a]].fn(c);`,
+    `const foo = (a) => (b) => (b + '')(a);`,
+    `const foo = (a) => (b) => bar(b + '');`,
+    'const foo = (a) => (b) => `${b}`;',
     `
     const createItem = ({h}, options) => (props, children) => children;
     export default (treant, options) => {
@@ -65,7 +68,7 @@ ruleTester.run('eager-calls', rule, {
           return bar(c, d);
         }
       `,
-      errors
+      errors: [error]
     },
     {
       code: `
@@ -73,7 +76,7 @@ ruleTester.run('eager-calls', rule, {
           return (a) => bar(arguments);
         }
       `,
-      errors
+      errors: [error]
     },
     {
       code: `
@@ -82,35 +85,35 @@ ruleTester.run('eager-calls', rule, {
           return () => bar(b);
         }
       `,
-      errors
+      errors: [error]
     },
     {
       code: `const foo = (a, c) => (b) => a.fn(c);`,
-      errors
+      errors: [error]
     },
     {
       code: `const foo = (a, c) => (b) => a.b.fn(c);`,
-      errors
+      errors: [error]
     },
     {
       code: `const foo = (a, c) => (b) => a.d.fn(c);`,
-      errors
+      errors: [error]
     },
     {
       code: `const foo = (a, c) => (b) => a.d().fn(c);`,
-      errors
+      errors: [error, error]
     },
     {
       code: `const foo = (a, c) => (b) => a.d['b'].fn(c);`,
-      errors
+      errors: [error]
     },
     {
       code: `const foo = (a, c) => (b) => a.d[a].fn(c);`,
-      errors
+      errors: [error]
     },
     {
       code: `const foo = (a, b) => bar(c, d);`,
-      errors
+      errors: [error]
     },
     {
       code: `
@@ -119,7 +122,7 @@ ruleTester.run('eager-calls', rule, {
           return bar(c)(a, b);
         }
       `,
-      errors
+      errors: [error]
     },
     {
       code: `
@@ -132,7 +135,7 @@ ruleTester.run('eager-calls', rule, {
           };
         };
       `,
-      errors
+      errors: [error]
     }
   ]
 });

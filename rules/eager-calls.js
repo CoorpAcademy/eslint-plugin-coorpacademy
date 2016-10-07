@@ -1,29 +1,13 @@
 'use strict';
 
+const {containsIdentifier} = require('./utils/contains-identifier');
+
 const getNames = items => items.map(item => item.name);
 
 function getVariablesInScope(context) {
   return context.getScope()
     .variables
     .map(ref => ref.name);
-}
-
-function expressionUsesVariables(callee, names) {
-  switch (callee.type) {
-    case 'CallExpression':
-      return true;
-    case 'MemberExpression': {
-      if (callee.computed === false) {
-        return expressionUsesVariables(callee.object, names);
-      }
-      return expressionUsesVariables(callee.property, names) ||
-        expressionUsesVariables(callee.object, names);
-    }
-    case 'Identifier':
-      return names.includes(callee.name);
-    default:
-      return false;
-  }
 }
 
 function create(context) {
@@ -40,15 +24,23 @@ function create(context) {
     CallExpression(node) {
       const argNames = getNames(node.arguments);
       const currentBlockScopeVariables = scopeStack[0];
-      if (expressionUsesVariables(node.callee, currentBlockScopeVariables)) {
+      if (scopeStack.length <= 1 || node.callee.type === 'CallExpression') {
         return;
       }
-      if (scopeStack.length > 1 && argNames.every(name => !currentBlockScopeVariables.includes(name))) {
-        context.report({
-          message: `Call could be made in a parent function.`,
-          node
-        });
+
+      try {
+        currentBlockScopeVariables.some(variable => containsIdentifier(variable, node))
       }
+      catch(error) {
+        console.log(currentBlockScopeVariables, node);
+      }
+      if (currentBlockScopeVariables.some(variable => containsIdentifier(variable, node))) {
+        return;
+      };
+      context.report({
+        message: `Call could be made in a parent function.`,
+        node
+      });
     },
     Program: incrementLevel,
     FunctionDeclaration: incrementLevel,

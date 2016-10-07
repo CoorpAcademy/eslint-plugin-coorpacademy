@@ -1,7 +1,9 @@
 'use strict';
 
 module.exports = {
-  rules: {},
+  rules: {
+    'eager-calls': require('./rules/eager-calls')
+  },
   configs: {
     'ava': require('./config/ava'),
     'core': require('./config/core'),
