@@ -12,8 +12,13 @@ function expressionUsesVariables(callee, names) {
   switch (callee.type) {
     case 'CallExpression':
       return true;
-    case 'MemberExpression':
-      return expressionUsesVariables(callee.object, names);
+    case 'MemberExpression': {
+      if (callee.computed === false) {
+        return expressionUsesVariables(callee.object, names);
+      }
+      return expressionUsesVariables(callee.property, names) ||
+        expressionUsesVariables(callee.object, names);
+    }
     case 'Identifier':
       return names.includes(callee.name);
     default:
