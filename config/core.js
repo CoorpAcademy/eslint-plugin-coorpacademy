@@ -229,7 +229,10 @@ module.exports = {
         'no-restricted-globals': 'off',
         'no-restricted-imports': 'off',
         'no-restricted-modules': 'off',
-        'no-restricted-properties': 'off',
+        'no-restricted-properties': ['error', {
+            object: 'Promise',
+            property: 'longStackTraces'
+        }],
         'no-restricted-syntax': 'off',
         'no-return-assign': 'error',
         'no-script-url': 'error',
