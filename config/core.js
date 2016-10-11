@@ -39,6 +39,7 @@ module.exports = {
         'import/default': 'error',
         'import/export': 'error',
         'import/extensions': 'error',
+        'import/first': 'error',
         'import/imports-first': 'error',
         'import/max-dependencies': 'off',
         'import/named': 'error',
@@ -47,20 +48,23 @@ module.exports = {
         'import/no-absolute-path': 'error',
         'import/no-amd': 'error',
         'import/no-commonjs': 'off',
-        'import/no-internal-modules': 'off',
         'import/no-deprecated': 'error',
         'import/no-duplicates': 'error',
         'import/no-dynamic-require': 'error',
         'import/no-extraneous-dependencies': 'error',
+        'import/no-internal-modules': 'off',
         'import/no-mutable-exports': 'error',
         'import/no-named-as-default-member': 'error',
         'import/no-named-as-default': 'error',
         'import/no-namespace': 'off',
         'import/no-nodejs-modules': 'off',
         'import/no-restricted-paths': 'off',
+        'import/no-unassigned-import': 'off',
         'import/no-unresolved': 'error',
-        'import/order': ['error', {'newlines-between': 'never'}],
+        'import/no-webpack-loader-syntax': 'error',
+        'import/order': ['error', {'newlines-between': 'ignore'}],
         'import/prefer-default-export': 'error',
+        'import/unambiguous': 'off',
 
         'unicorn/catch-error-name': 'off',
         'unicorn/explicit-length-check': 'error',
@@ -160,7 +164,7 @@ module.exports = {
         'no-dupe-class-members': 'error',
         'no-dupe-keys': 'error',
         'no-duplicate-case': 'error',
-        'no-duplicate-imports': 'error',
+        'no-duplicate-imports': 'off',
         'no-else-return': 'off',
         'no-empty-character-class': 'error',
         'no-empty-function': 'off',
@@ -225,7 +229,10 @@ module.exports = {
         'no-restricted-globals': 'off',
         'no-restricted-imports': 'off',
         'no-restricted-modules': 'off',
-        'no-restricted-properties': 'off',
+        'no-restricted-properties': ['error', {
+            object: 'Promise',
+            property: 'longStackTraces'
+        }],
         'no-restricted-syntax': 'off',
         'no-return-assign': 'error',
         'no-script-url': 'error',
@@ -233,7 +240,7 @@ module.exports = {
         'no-self-compare': 'error',
         'no-sequences': 'error',
         'no-shadow-restricted-names': 'error',
-        'no-shadow': ['error', {builtinGlobals: true, hoist: 'all'}],
+        'no-shadow': ['error', {builtinGlobals: true, hoist: 'all', 'allow': ['Promise']}],
         'no-spaced-func': 'error',
         'no-sparse-arrays': 'error',
         'no-sync': 'off',
@@ -314,7 +321,7 @@ module.exports = {
         'yield-star-spacing': 'off',
         'yoda': ['error', 'never', { 'exceptRange': true }],
     },
-    "settings": {
-      "import/ignore": ["node_modules", "\\.css$"]
+    'settings': {
+      'import/ignore': ['node_modules', '\\.css$']
     }
 };
