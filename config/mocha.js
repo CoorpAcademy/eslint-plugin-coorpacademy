@@ -16,6 +16,7 @@ module.exports = {
         "mocha/no-hooks-for-single-case": ["error", {"allow": ["after"]}],
         'mocha/no-identical-title': 'error',
         'mocha/no-mocha-arrows': 'error',
+        'mocha/no-nested-tests': 'error',
         'mocha/no-pending-tests': 'error',
         'mocha/no-return-and-callback': 'error',
         'mocha/no-sibling-hooks': 'error',
