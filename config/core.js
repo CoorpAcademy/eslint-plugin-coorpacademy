@@ -34,7 +34,10 @@ module.exports = {
         'promise/always-catch': 'off',
         'promise/catch-or-return': 'error',
         'promise/no-native': 'error',
+        'promise/no-return-wrap': 'off',
         'promise/param-names': 'error',
+        'promise/prefer-await-to-callbacks': 'off',
+        'promise/prefer-await-to-then': 'off',
 
         'import/default': 'error',
         'import/export': 'error',
@@ -271,6 +274,7 @@ module.exports = {
         'no-useless-constructor': 'off',
         'no-useless-escape': 'error',
         'no-useless-rename': 'error',
+        'no-useless-return': 'off',
         'no-var': 'off',
         'no-void': 'error',
         'no-warning-comments': 'warn',

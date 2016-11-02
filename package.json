@@ -5,21 +5,21 @@
   "main": "index.js",
   "dependencies": {
     "babel-eslint": "^7.0.0",
-    "eslint-plugin-ava": "^3.1.0",
+    "eslint-plugin-ava": "^3.1.1",
     "eslint-plugin-fp": "^2.2.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-jsx": "0.0.2",
-    "eslint-plugin-lodash-fp": "^2.0.1",
+    "eslint-plugin-lodash-fp": "^2.1.1",
     "eslint-plugin-mocha": "^4.7.0",
-    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-unicorn": "^1.0.0"
   },
   "peerDependencies": {
     "eslint": ">=3"
   },
   "devDependencies": {
-    "eslint": "^3.7.1",
+    "eslint": "^3.9.1",
     "eslint-find-rules": "^1.14.0"
   },
   "scripts": {
