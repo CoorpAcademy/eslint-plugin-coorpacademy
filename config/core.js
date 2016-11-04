@@ -59,6 +59,7 @@ module.exports = {
         'import/no-mutable-exports': 'error',
         'import/no-named-as-default-member': 'error',
         'import/no-named-as-default': 'error',
+        'import/no-named-default': 'error',
         'import/no-namespace': 'off',
         'import/no-nodejs-modules': 'off',
         'import/no-restricted-paths': 'off',
