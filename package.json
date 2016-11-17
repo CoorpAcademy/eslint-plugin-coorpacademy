@@ -7,7 +7,7 @@
     "babel-eslint": "^6.0.4",
     "eslint-plugin-ava": "^3.0.0",
     "eslint-plugin-fp": "^2.2.0",
-    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-lodash-fp": "^2.0.1",
