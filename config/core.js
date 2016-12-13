@@ -252,7 +252,11 @@ module.exports = {
         'no-self-compare': 'error',
         'no-sequences': 'error',
         'no-shadow-restricted-names': 'error',
-        'no-shadow': ['error', {builtinGlobals: true, hoist: 'all', 'allow': ['Promise', 'name']}],
+        'no-shadow': ['error', {
+          builtinGlobals: true,
+          hoist: 'all',
+          'allow': ['Promise', 'name', 'find']
+        }],
         'no-spaced-func': 'error',
         'no-sparse-arrays': 'error',
         'no-sync': 'off',
