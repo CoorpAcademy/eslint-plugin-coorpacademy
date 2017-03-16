@@ -1,5 +1,7 @@
 # Coorpacademy ESLint plugin
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/CoorpAcademy/eslint-plugin-coorpacademy.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/@coorpacademy/eslint-plugin-coorpacademy.svg?maxAge=2592000)](https://github.com/CoorpAcademy/eslint-plugin-coorpacademy)
 [![travis](https://api.travis-ci.org/CoorpAcademy/eslint-plugin-coorpacademy.svg)](https://travis-ci.org/CoorpAcademy/eslint-plugin-coorpacademy)
 
