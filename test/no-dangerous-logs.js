@@ -100,6 +100,10 @@ ruleTester.run('no-dangerous-logs', rule, {
 		{
 			code: 'console.log(foo.config)',
 			errors
+		},
+		{
+			code: 'console.log(config)',
+			errors
 		}
 	]
 });
