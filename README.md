@@ -36,3 +36,4 @@ Available rule sets are:
 - [jsx](./config/jsx.js): Rules for when using JSX
 - [lodash-fp](./config/lodash-fp.js): Rules for when using Lodash's FP flavor
 - [mocha](./config/mocha.js): Rules for when using Mocha
+- [prettier](./config/prettier.js): Disables all stylistic rules but adds source code auto-formatting.
