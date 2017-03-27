@@ -10,6 +10,7 @@ module.exports = {
     'es20XX': require('./config/es20XX'),
     'jsx': require('./config/jsx'),
     'lodash-fp': require('./config/lodash-fp'),
-    'mocha': require('./config/mocha')
-  },
+    'mocha': require('./config/mocha'),
+    'prettier': require('./config/prettier')
+  }
 };
