@@ -1,7 +1,9 @@
 'use strict';
 
+const requireIndex = require('requireindex');
+
 module.exports = {
-  rules: {},
+  rules: requireIndex(__dirname + '/rules'),
   configs: {
     'ava': require('./config/ava'),
     'core': require('./config/core'),
