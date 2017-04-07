@@ -23,9 +23,9 @@
     "eslint": ">=3"
   },
   "devDependencies": {
-    "ava": "^0.18.2",
+    "ava": "^0.19.0",
     "eslint": "^3.18.0",
-    "eslint-ava-rule-tester": "^2.0.0",
+    "eslint-ava-rule-tester": "^2.0.1",
     "eslint-find-rules": "^1.14.0"
   },
   "scripts": {
