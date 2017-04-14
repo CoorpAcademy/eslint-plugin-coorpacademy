@@ -4,26 +4,29 @@ const dangerousIdentifiers = ['context', 'ctx', 'req', 'process', 'config'];
 const loggerFunctions = ['log', 'info', 'warn', 'error'];
 
 function isDangerousProperty(node) {
-  return node.property.type === 'Identifier' &&
-    ( ['config'].indexOf(node.property.name) >= 0 ||
-      ( node.property.name === 'env' &&
+  return (
+    node.property.type === 'Identifier' &&
+    (['config'].indexOf(node.property.name) >= 0 ||
+      (node.property.name === 'env' &&
         node.object.type === 'Identifier' &&
-        node.object.name === 'process'
-      )
-    );
+        node.object.name === 'process'))
+  );
 }
 
 function isDangerousData(node) {
-  return (node.type === 'Identifier' && dangerousIdentifiers.indexOf(node.name) >= 0) ||
-    ( node.type === 'MemberExpression' && isDangerousProperty(node));
+  return (
+    (node.type === 'Identifier' && dangerousIdentifiers.indexOf(node.name) >= 0) ||
+    (node.type === 'MemberExpression' && isDangerousProperty(node))
+  );
 }
 
 function isLogCall(node) {
-  return (node.type === 'Identifier' && node.name === 'debug') ||
-    ( node.type === 'MemberExpression' &&
+  return (
+    (node.type === 'Identifier' && node.name === 'debug') ||
+    (node.type === 'MemberExpression' &&
       node.property.type === 'Identifier' &&
-      loggerFunctions.indexOf(node.property.name) >= 0
-    );
+      loggerFunctions.indexOf(node.property.name) >= 0)
+  );
 }
 
 function create(context) {

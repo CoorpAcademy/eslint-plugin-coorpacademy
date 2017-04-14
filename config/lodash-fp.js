@@ -1,9 +1,7 @@
 'use strict';
 
 module.exports = {
-  plugins: [
-    'lodash-fp'
-  ],
+  plugins: ['lodash-fp'],
   rules: {
     'lodash-fp/consistent-compose': ['error', 'pipe'],
     'lodash-fp/consistent-name': ['error', '_'],

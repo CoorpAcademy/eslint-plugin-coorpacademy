@@ -1,17 +1,17 @@
 'use strict';
 
 module.exports = {
-    parserOptions: {
-        sourceType: 'module'
-    },
-    rules: {
-      'fp/no-arguments': 'error',
+  parserOptions: {
+    sourceType: 'module'
+  },
+  rules: {
+    'fp/no-arguments': 'error',
 
-      'no-var': 'error',
-      'object-shorthand': 'error',
-      'prefer-const': 'error',
-      'prefer-rest-params': 'error',
-      'prefer-spread': 'error',
-      'prefer-template': 'error',
-    }
+    'no-var': 'error',
+    'object-shorthand': 'error',
+    'prefer-const': 'error',
+    'prefer-rest-params': 'error',
+    'prefer-spread': 'error',
+    'prefer-template': 'error'
+  }
 };
