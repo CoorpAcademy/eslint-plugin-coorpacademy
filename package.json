@@ -29,7 +29,8 @@
     "eslint-find-rules": "^1.14.0"
   },
   "scripts": {
-    "test": "npm run lint && node index.js && ava",
+    "test": "npm run lint && node index.js && npm run test:unit",
+    "test:unit": "ava",
     "find-missing": "npm run fm-core && npm run fm-ava && npm run fm-lodash-fp && npm run fm-mocha",
     "fm-core": "eslint-find-rules -v --unused ./config/core.js",
     "fm-ava": "eslint-find-rules -v --unused --no-core ./config/ava.js",
