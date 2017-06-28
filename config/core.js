@@ -37,7 +37,7 @@ module.exports = {
     'promise/prefer-await-to-callbacks': 'off',
     'promise/prefer-await-to-then': 'off',
 
-    'coorpacademy/no-dangerous-logs': 'error',
+    '@coorpacademy/coorpacademy/no-dangerous-logs': 'error',
 
     'import/default': 'error',
     'import/export': 'error',
