@@ -132,6 +132,7 @@ module.exports = {
     'func-style': 'off',
     'generator-star-spacing': 'off',
     'global-require': 'off',
+    'getter-return': 'error',
     'guard-for-in': 'error',
     'handle-callback-err': 'off',
     'id-blacklist': 'off',
