@@ -1240,9 +1240,9 @@ eslint-ava-rule-tester@^2.0.1:
   dependencies:
     eslint "^3.0.1"
 
-eslint-config-prettier@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-2.3.0.tgz#b75b1eabea0c8b97b34403647ee25db349b9d8a0"
+eslint-config-prettier@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-2.4.0.tgz#fb7cf29c0ab2ba61af5164fb1930f9bef3be2872"
   dependencies:
     get-stdin "^5.0.1"
 
@@ -1414,9 +1414,9 @@ eslint@^3.0.1:
     text-table "~0.2.0"
     user-home "^2.0.0"
 
-eslint@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.npmjs.org/eslint/-/eslint-4.5.0.tgz#bb75d3b8bde97fb5e13efcd539744677feb019c3"
+eslint@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.npmjs.org/eslint/-/eslint-4.6.1.tgz#ddc7fc7fd70bf93205b0b3449bb16a1e9e7d4950"
   dependencies:
     ajv "^5.2.0"
     babel-code-frame "^6.22.0"
@@ -2923,9 +2923,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@1.6.0:
-  version "1.6.0"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-1.6.0.tgz#23e9c68251f440feb847f558821bead21765919a"
+prettier@1.6.1:
+  version "1.6.1"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-1.6.1.tgz#850f411a3116226193e32ea5acfc21c0f9a76d7d"
 
 pretty-ms@^0.2.1:
   version "0.2.2"
