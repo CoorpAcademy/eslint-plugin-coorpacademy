@@ -31,11 +31,12 @@
   "scripts": {
     "test": "npm run lint && node index.js && npm run test:unit",
     "test:unit": "ava",
-    "find-missing": "npm run fm-core && npm run fm-ava && npm run fm-lodash-fp && npm run fm-mocha",
+    "find-missing": "npm run fm-core && npm run fm-ava && npm run fm-lodash-fp && npm run fm-mocha && npm run fm-prettier",
     "fm-core": "eslint-find-rules -v --unused ./config/core.js",
     "fm-ava": "eslint-find-rules -v --unused --no-core ./config/ava.js",
     "fm-lodash-fp": "eslint-find-rules -v --unused --no-core ./config/lodash-fp.js",
     "fm-mocha": "eslint-find-rules -v --unused --no-core ./config/mocha.js",
+    "fm-prettier": "eslint-find-rules -v --unused --no-core ./config/prettier.js",
     "prettier-core": "prettier --print-width 100 --single-quote --no-bracket-spacing config/**/*.js rules/**/*.js test/**/*.js *.js",
     "lint": "npm run prettier-core -s -- --list-different",
     "lint:fix": "npm run prettier-core -- --write"
