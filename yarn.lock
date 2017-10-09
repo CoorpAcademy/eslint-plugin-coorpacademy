@@ -1302,6 +1302,13 @@ eslint-ast-utils@^1.0.0:
   dependencies:
     lodash.get "^4.4.2"
 
+eslint-ast-utils@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/eslint-ast-utils/-/eslint-ast-utils-1.1.0.tgz#3d58ba557801cfb1c941d68131ee9f8c34bd1586"
+  dependencies:
+    lodash.get "^4.4.2"
+    lodash.zip "^4.2.0"
+
 eslint-ava-rule-tester@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/eslint-ava-rule-tester/-/eslint-ava-rule-tester-2.0.2.tgz#543a13a5dcf326e3e700a2f05ebb6886451802c1"
@@ -1382,7 +1389,7 @@ eslint-plugin-json@^1.2.0:
   dependencies:
     jshint "^2.8.0"
 
-eslint-plugin-jsx@^0.0.2:
+eslint-plugin-jsx@0.0.2:
   version "0.0.2"
   resolved "https://registry.npmjs.org/eslint-plugin-jsx/-/eslint-plugin-jsx-0.0.2.tgz#64b6621d70dc7098dd14a189b1427c70e34cb230"
   dependencies:
@@ -2520,6 +2527,10 @@ lodash.snakecase@^4.0.1:
 lodash.upperfirst@^4.2.0:
   version "4.3.1"
   resolved "https://registry.npmjs.org/lodash.upperfirst/-/lodash.upperfirst-4.3.1.tgz#1365edf431480481ef0d1c68957a5ed99d49f7ce"
+
+lodash.zip@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npmjs.org/lodash.zip/-/lodash.zip-4.2.0.tgz#ec6662e4896408ed4ab6c542a3990b72cc080020"
 
 lodash@3.7.x:
   version "3.7.0"
