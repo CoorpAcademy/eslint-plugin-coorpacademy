@@ -130,6 +130,7 @@ module.exports = {
     'func-name-matching': 'off',
     'func-names': 'off',
     'func-style': 'off',
+    'function-paren-newline': 'off',
     'generator-star-spacing': 'off',
     'global-require': 'off',
     'getter-return': 'error',
