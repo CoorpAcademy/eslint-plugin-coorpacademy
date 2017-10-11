@@ -115,7 +115,7 @@ const possibleProperties = addToAndNegation({
     properties: [['']],
     minArgs: 1
   },
-  instanceOf: {
+  instanceof: {
     properties: [['be', 'an']],
     minArgs: 1
   },
