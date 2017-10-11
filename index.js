@@ -8,7 +8,7 @@ module.exports = {
     ava: require('./config/ava'),
     core: require('./config/core'),
     es20XX: require('./config/es20XX'),
-    jsx: require('./config/jsx'),
+    react: require('./config/react'),
     'lodash-fp': require('./config/lodash-fp'),
     mocha: require('./config/mocha'),
     prettier: require('./config/prettier')
