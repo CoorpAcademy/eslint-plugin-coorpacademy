@@ -2,11 +2,11 @@
 
 module.exports = {
   parserOptions: {
+    ecmaVersion: 2017,
     sourceType: 'module'
   },
   rules: {
     'fp/no-arguments': 'error',
-
     'no-var': 'error',
     'object-shorthand': 'error',
     'prefer-const': 'error',
