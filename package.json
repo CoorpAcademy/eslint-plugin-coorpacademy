@@ -30,11 +30,12 @@
     "ava": "^0.22.0",
     "eslint": "^4.8.0",
     "eslint-ava-rule-tester": "^2.0.2",
-    "eslint-find-rules": "^3.1.1"
+    "eslint-find-rules": "^3.1.1",
+    "nyc": "^11.2.1"
   },
   "scripts": {
-    "test": "npm run lint && node index.js && npm run test:unit",
-    "test:unit": "ava",
+    "test": "npm run lint && npm run test:unit && npm run find-missing",
+    "test:unit": "nyc ava",
     "find-missing": "npm run fm-core && npm run fm-ava && npm run fm-lodash-fp && npm run fm-react && npm run fm-mocha && npm run fm-prettier",
     "fm-core": "eslint-find-rules -v --unused ./config/core.js",
     "fm-ava": "eslint-find-rules -v --unused --no-core ./config/ava.js",
@@ -54,6 +55,15 @@
     "config",
     "rules"
   ],
+  "nyc": {
+    "all": true,
+    "cache": true,
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CoorpAcademy/eslint-plugin-coorpacademy.git"
