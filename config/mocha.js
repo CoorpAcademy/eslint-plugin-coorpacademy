@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: ['mocha'],
   rules: {
+    '@coorpacademy/coorpacademy/use-expect': 'error',
     'mocha/handle-done-callback': 'error',
     'mocha/max-top-level-suites': 'off',
     'mocha/no-exclusive-tests': 'error',
