@@ -156,7 +156,7 @@ const possibleProperties = addToAndNegation({
     minArgs: 1
   },
   members: {
-    properties: [['have'], ['have', 'ordered']],
+    properties: [['have'], ['have', 'ordered'], ['include']],
     minArgs: 1
   },
   most: {

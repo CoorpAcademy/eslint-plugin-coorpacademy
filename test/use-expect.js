@@ -71,6 +71,8 @@ ruleTester.run('use-expect', rule, {
     'expect(a).to.not.have.members([1, 2, 3])',
     'expect(a).to.have.ordered.members([1, 2, 3])',
     'expect(a).to.not.have.ordered.members([1, 2, 3])',
+    'expect(a).to.include.members([1, 2, 3])',
+    'expect(a).to.not.include.members([1, 2, 3])',
     'expect(a).to.have.property("foo")',
     'expect(a).to.not.have.property("foo")',
     'expect(a).to.have.all.keys("foo")',
