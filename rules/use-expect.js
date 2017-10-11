@@ -88,6 +88,10 @@ const possibleProperties = addToAndNegation({
     properties: [['have', 'been']],
     minArgs: 1
   },
+  calledWithMatch: {
+    properties: [['have', 'been']],
+    minArgs: 1
+  },
   closeTo: {
     properties: [['be']],
     minArgs: 1
@@ -128,6 +132,10 @@ const possibleProperties = addToAndNegation({
     minArgs: 1,
     disableNot: true
   },
+  lengthOf: {
+    properties: [['have']],
+    minArgs: 1
+  },
   lessThan: {
     properties: [['be']],
     minArgs: 1,
@@ -145,6 +153,10 @@ const possibleProperties = addToAndNegation({
   },
   match: {
     properties: [['']],
+    minArgs: 1
+  },
+  members: {
+    properties: [['have'], ['have', 'ordered']],
     minArgs: 1
   },
   most: {
