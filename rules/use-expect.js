@@ -330,8 +330,9 @@ function create(context) {
       if (possibleProperties[methodName].minArgs > expression.arguments.length) {
         context.report({
           node: expression,
-          message: `${methodName}() expects at least ${possibleProperties[methodName]
-            .minArgs} argument(s)`
+          message: `${methodName}() expects at least ${
+            possibleProperties[methodName].minArgs
+          } argument(s)`
         });
         return;
       }
