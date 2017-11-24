@@ -33,7 +33,8 @@ Available rule sets are:
 - [ava](./config/ava.js): Rules for when using AVA
 - [core](./config/core.js): Shared ESLint rules
 - [es20XX](./config/es20XX.js): Rules for when using ES2015+ syntax
-- [jsx](./config/jsx.js): Rules for when using JSX
+- [flowtype](./config/flowtype.js): Rules for when using Flowtype
 - [lodash-fp](./config/lodash-fp.js): Rules for when using Lodash's FP flavor
 - [mocha](./config/mocha.js): Rules for when using Mocha
 - [prettier](./config/prettier.js): Disables all stylistic rules but adds source code auto-formatting.
+- [react](./config/react.js): Rules for when using React
