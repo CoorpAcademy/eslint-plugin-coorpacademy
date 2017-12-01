@@ -38,6 +38,7 @@ module.exports = {
     'promise/prefer-await-to-callbacks': 'off',
     'promise/prefer-await-to-then': 'off',
 
+    '@coorpacademy/coorpacademy/no-async-callback': 'error',
     '@coorpacademy/coorpacademy/no-dangerous-logs': 'error',
 
     'import/default': 'error',
