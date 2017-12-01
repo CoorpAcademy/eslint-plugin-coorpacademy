@@ -146,6 +146,7 @@ module.exports = {
     'id-blacklist': 'off',
     'id-length': 'off',
     'id-match': 'off',
+    'implicit-arrow-linebreak': 'off',
     'indent-legacy': 'off',
     indent: ['error', 2, {SwitchCase: 1}],
     'init-declarations': 'off',
