@@ -15,6 +15,6 @@ test('index should contain all configurations', t => {
 test('index should contain all rules', t => {
   t.deepEqual(
     Object.keys(m.rules).sort(),
-    ['no-async-callback', 'no-dangerous-logs', 'use-expect'].sort()
+    ['no-async-callback', 'no-dangerous-logs', 'no-overwriting-spread', 'use-expect'].sort()
   );
 });
