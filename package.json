@@ -20,7 +20,7 @@
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-unicorn": "^3.0.1",
     "lodash": "^4.17.4",
-    "prettier": "1.10.2",
+    "prettier": "^1.10.2",
     "requireindex": "^1.1.0"
   },
   "peerDependencies": {
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "ava": "^0.25.0",
-    "eslint": "^4.16.0",
+    "eslint": "^4.17.0",
     "eslint-ava-rule-tester": "^2.0.2",
     "eslint-find-rules": "^3.1.1",
     "nyc": "^11.2.1"
