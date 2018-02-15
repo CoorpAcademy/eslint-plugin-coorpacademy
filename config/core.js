@@ -86,6 +86,7 @@ module.exports = {
 
     'unicorn/catch-error-name': 'off',
     'unicorn/custom-error-definition': 'error',
+    'unicorn/error-message': 'error',
     'unicorn/escape-case': 'error',
     'unicorn/explicit-length-check': 'error',
     'unicorn/filename-case': ['error', {case: 'kebabCase'}],
@@ -97,7 +98,10 @@ module.exports = {
     'unicorn/no-hex-escape': 'error',
     'unicorn/no-new-buffer': 'error',
     'unicorn/no-process-exit': 'error',
+    'unicorn/no-unsafe-regex': 'error',
     'unicorn/number-literal-case': 'error',
+    'unicorn/prefer-add-event-listener': 'off',
+    'unicorn/prefer-spread': 'error',
     'unicorn/prefer-starts-ends-with': 'error',
     'unicorn/prefer-type-error': 'error',
     'unicorn/regex-shorthand': 'error',
