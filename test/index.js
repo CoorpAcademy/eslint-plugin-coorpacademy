@@ -1,6 +1,10 @@
 import test from 'ava';
 import m from '..';
 
+test('index should contain combineConfigs function', t => {
+  t.is(typeof m.combineConfigs, 'function');
+});
+
 test('index should contain all configurations', t => {
   t.deepEqual(
     Object.keys(m.configs).sort(),
