@@ -103,7 +103,7 @@ module.exports = {
     'unicorn/no-hex-escape': 'error',
     'unicorn/no-new-buffer': 'error',
     'unicorn/no-process-exit': 'error',
-    'unicorn/no-unsafe-regex': 'error',
+    'unicorn/no-unsafe-regex': 'off',
     'unicorn/number-literal-case': 'error',
     'unicorn/prefer-add-event-listener': 'off',
     'unicorn/prefer-spread': 'error',
