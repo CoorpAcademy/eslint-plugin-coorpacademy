@@ -1,6 +1,6 @@
 {
   "name": "@coorpacademy/eslint-plugin-coorpacademy",
-  "version": "7.0.2",
+  "version": "8.0.0",
   "description": "Common ESLint config for Coorpacademy projects",
   "main": "index.js",
   "dependencies": {
