@@ -53,7 +53,8 @@
   "files": [
     "index.js",
     "config",
-    "rules"
+    "rules",
+    "utils"
   ],
   "nyc": {
     "all": true,
