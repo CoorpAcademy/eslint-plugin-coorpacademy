@@ -14,9 +14,9 @@
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-lodash-fp": "^2.1.3",
-    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-mocha": "^4.12.1",
     "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-unicorn": "^4.0.2",
     "lodash": "^4.17.5",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "ava": "^0.25.0",
-    "eslint": "^4.18.1",
+    "eslint": "^4.18.2",
     "eslint-ava-rule-tester": "^2.0.2",
     "eslint-find-rules": "^3.2.1",
     "nyc": "^11.2.1"
