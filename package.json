@@ -8,6 +8,7 @@
     "eslint-ast-utils": "^1.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-ava": "^4.5.1",
+    "eslint-plugin-css-modules": "^2.7.5",
     "eslint-plugin-flowtype": "^2.46.1",
     "eslint-plugin-flowtype-errors": "^3.5.1",
     "eslint-plugin-fp": "^2.3.0",
@@ -36,13 +37,14 @@
   "scripts": {
     "test": "npm run lint && npm run test:unit && npm run find-missing",
     "test:unit": "nyc ava",
-    "find-missing": "npm run fm-core && npm run fm-ava && npm run fm-lodash-fp && npm run fm-react && npm run fm-mocha && npm run fm-prettier",
+    "find-missing": "npm run fm-core && npm run fm-ava && npm run fm-lodash-fp && npm run fm-react && npm run fm-mocha && npm run fm-prettier && npm run fm-css-modules",
     "fm-core": "eslint-find-rules -v --unused ./config/core.js",
     "fm-ava": "eslint-find-rules -v --unused --no-core ./config/ava.js",
     "fm-lodash-fp": "eslint-find-rules -v --unused --no-core ./config/lodash-fp.js",
     "fm-mocha": "eslint-find-rules -v --unused --no-core ./config/mocha.js",
     "fm-prettier": "eslint-find-rules -v --unused --no-core ./config/prettier.js",
     "fm-react": "eslint-find-rules -v --unused --no-core ./config/react.js",
+    "fm-css-modules": "eslint-find-rules -v --unused --no-core ./config/css-modules.js",
     "prettier-core": "prettier --print-width 100 --single-quote --no-bracket-spacing config/**/*.js rules/**/*.js test/**/*.js *.js",
     "lint": "npm run prettier-core -s -- --list-different",
     "lint:fix": "npm run prettier-core -- --write"
