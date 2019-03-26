@@ -2,18 +2,20 @@ language: node_js
 node_js:
 - '8'
 sudo: false
-
 env:
+env:
+  global:
+    - CXX=g++-4.8
   matrix:
-    - 'STEP=test'
-    - 'STEP=find-missing:ava'
-    - 'STEP=find-missing:core'
-    - 'STEP=find-missing:css-modules'
-    - 'STEP=find-missing:flowtype'
-    - 'STEP=find-missing:lodash-fp'
-    - 'STEP=find-missing:mocha'
-    - 'STEP=find-missing:prettier'
-    - 'STEP=find-missing:react'
+    - STEP='test'
+    - STEP='find-missing:ava'
+    - STEP='find-missing:core'
+    - STEP='find-missing:css-modules'
+    - STEP='find-missing:flowtype'
+    - STEP='find-missing:lodash-fp'
+    - STEP='find-missing:mocha'
+    - STEP='find-missing:prettier'
+    - STEP='find-missing:react'
 
 script:
   - npm run $STEP
@@ -29,8 +31,7 @@ deploy:
   on:
     tags: true
     repo: CoorpAcademy/eslint-plugin-coorpacademy
-env:
-- CXX=g++-4.8
+
 addons:
   apt:
     sources:
