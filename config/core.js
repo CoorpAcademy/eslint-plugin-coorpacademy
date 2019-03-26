@@ -88,8 +88,12 @@ module.exports = {
     'import/no-useless-path-segments': 'error',
     'import/no-webpack-loader-syntax': 'error',
     'import/order': ['error', {'newlines-between': 'ignore'}],
-    'import/prefer-default-export': 'error',
+    'import/prefer-default-export': 'error', // §TODO: à désactiver
     'import/unambiguous': 'off',
+    'import/dynamic-import-chunkname': 'error',
+    'import/no-cycle': 'error',
+    'import/no-named-export': 'off',
+    'import/no-relative-parent-imports': 'off',
 
     'unicorn/catch-error-name': 'off',
     'unicorn/custom-error-definition': 'error',
