@@ -1,7 +1,23 @@
-sudo: false
 language: node_js
 node_js:
 - '8'
+sudo: false
+
+env:
+  matrix:
+    - 'STEP=test'
+    - 'STEP=find-missing:ava'
+    - 'STEP=find-missing:core'
+    - 'STEP=find-missing:css-modules'
+    - 'STEP=find-missing:flowtype'
+    - 'STEP=find-missing:lodash-fp'
+    - 'STEP=find-missing:mocha'
+    - 'STEP=find-missing:prettier'
+    - 'STEP=find-missing:react'
+
+script:
+  - npm run $STEP
+
 cache:
   directories:
   - node_modules
