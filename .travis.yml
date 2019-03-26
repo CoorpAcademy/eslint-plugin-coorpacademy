@@ -4,8 +4,6 @@ node_js:
 sudo: false
 env:
 env:
-  global:
-    - CXX=g++-4.8
   matrix:
     - STEP='test'
     - STEP='find-missing:ava'
@@ -31,10 +29,3 @@ deploy:
   on:
     tags: true
     repo: CoorpAcademy/eslint-plugin-coorpacademy
-
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - g++-4.8
