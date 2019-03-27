@@ -19,6 +19,7 @@ module.exports = {
     'ava/no-identical-title': 'error',
     'ava/no-ignored-test-files': 'error',
     'ava/no-invalid-end': 'error',
+    'ava/no-import-test-files': 'error',
     'ava/no-nested-tests': 'error',
     'ava/no-only-test': 'error',
     'ava/no-skip-assert': 'error',
