@@ -262,13 +262,15 @@ const additionalChecks = {
 };
 
 const formatPossibleProperties = obj => {
-  return obj.properties.filter(props => !props.includes('not')).map(props => {
-    const joined = props.join('.');
-    if (obj.disableNot) {
-      return joined;
-    }
-    return joined.replace(/to/g, 'to[.not]');
-  });
+  return obj.properties
+    .filter(props => !props.includes('not'))
+    .map(props => {
+      const joined = props.join('.');
+      if (obj.disableNot) {
+        return joined;
+      }
+      return joined.replace(/to/g, 'to[.not]');
+    });
 };
 
 function create(context) {
