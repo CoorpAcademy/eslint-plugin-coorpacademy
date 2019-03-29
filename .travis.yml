@@ -3,7 +3,6 @@ node_js:
 - '8'
 sudo: false
 env:
-env:
   matrix:
     - STEP='lint'
     - STEP='test:unit'
