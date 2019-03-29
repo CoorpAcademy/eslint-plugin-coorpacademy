@@ -36,7 +36,7 @@
     "nyc": "^11.2.1"
   },
   "scripts": {
-    "test": "npm run lint && npm run test:unit",
+    "test": "npm run lint && npm run test:unit && npm run find-missing",
     "test:unit": "nyc ava",
     "find-missing": "npm run find-missing:core && npm run find-missing:ava && npm run find-missing:lodash-fp && npm run find-missing:react && npm run find-missing:mocha && npm run find-missing:prettier && npm run find-missing:css-modules && npm run find-missing:flowtype",
     "find-missing:core": "eslint-find-rules -v --unused ./config/core.js",

@@ -5,7 +5,8 @@ sudo: false
 env:
 env:
   matrix:
-    - STEP='test'
+    - STEP='lint'
+    - STEP='test:unit'
     - STEP='find-missing:ava'
     - STEP='find-missing:core'
     - STEP='find-missing:css-modules'
