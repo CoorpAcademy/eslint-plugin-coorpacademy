@@ -22,6 +22,8 @@ module.exports = {
     'mocha/no-top-level-hooks': 'error',
     'mocha/valid-suite-description': 'off',
     'mocha/valid-test-description': 'off',
+    'mocha/no-async-describe': 'error',
+    'mocha/prefer-arrow-callback': 'off',
 
     'chai-expect/no-inner-compare': 'error',
     'chai-expect/missing-assertion': 'error',

@@ -71,6 +71,18 @@ module.exports = {
     'react/sort-comp': 'error',
     'react/sort-prop-types': 'off',
     'react/style-prop-object': 'error',
-    'react/void-dom-elements-no-children': 'error'
+    'react/void-dom-elements-no-children': 'error',
+    'react/destructuring-assignment': 'error',
+    'react/jsx-max-depth': 'error',
+    'react/jsx-fragments': 'off',
+    'react/forbid-dom-props': 'off',
+    'react/jsx-child-element-spacing': 'error',
+    'react/jsx-one-expression-per-line': 'error',
+    'react/jsx-props-no-multi-spaces': 'error',
+    'react/button-has-type': 'error',
+    'react/jsx-sort-default-props': 'error',
+    'react/no-access-state-in-setstate': 'error',
+    'react/no-this-in-sfc': 'error',
+    'react/no-unsafe': 'error'
   }
 };
