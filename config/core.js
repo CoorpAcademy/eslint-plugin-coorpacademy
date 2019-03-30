@@ -128,7 +128,8 @@ module.exports = {
     'unicorn/prefer-node-remove': 'error',
     'unicorn/prefer-query-selector': 'off',
     'unicorn/prefer-text-content': 'error',
-    'unicorn/prevent-abbreviations': 'error',
+    'unicorn/prevent-abbreviations': 'off',
+    // tried but too contraignant, even if --fix works
 
     'accessor-pairs': 'off',
     'array-bracket-newline': 'off',
