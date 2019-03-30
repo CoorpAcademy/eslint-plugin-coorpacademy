@@ -12,6 +12,8 @@ Introduced:
 - unicorn/prefer-node-append
 - unicorn/prefer-node-remove
 - unicorn/prefer-text-content
+
+unicorn/prevent-abbreviations was tried but considered too painful
 #### Mocha
 - mocha/no-async-describe
 
