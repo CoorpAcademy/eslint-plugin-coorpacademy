@@ -21,7 +21,7 @@
     "eslint-plugin-react": "~7.4.0",
     "eslint-plugin-unicorn": "^4.0.2",
     "lodash": "^4.17.5",
-    "prettier": "1.11.1",
+    "prettier": "1.16.4",
     "requireindex": "^1.2.0"
   },
   "peerDependencies": {
