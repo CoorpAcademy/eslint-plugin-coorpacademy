@@ -1,5 +1,3 @@
-'use strict';
-
 const dangerousIdentifiers = ['context', 'ctx', 'req', 'process', 'config'];
 const loggerFunctions = ['log', 'info', 'warn', 'error'];
 

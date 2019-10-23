@@ -1,5 +1,3 @@
-'use strict';
-
 const _ = require('lodash/fp');
 
 const makeReport = (context, propertiesFieldKey, regularProperty, spreadProperty) => node => {

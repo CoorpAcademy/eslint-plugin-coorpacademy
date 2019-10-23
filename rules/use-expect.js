@@ -1,5 +1,3 @@
-'use strict';
-
 const _ = require('lodash/fp');
 const astUtils = require('eslint-ast-utils');
 
@@ -262,13 +260,15 @@ const additionalChecks = {
 };
 
 const formatPossibleProperties = obj => {
-  return obj.properties.filter(props => !props.includes('not')).map(props => {
-    const joined = props.join('.');
-    if (obj.disableNot) {
-      return joined;
-    }
-    return joined.replace(/to/g, 'to[.not]');
-  });
+  return obj.properties
+    .filter(props => !props.includes('not'))
+    .map(props => {
+      const joined = props.join('.');
+      if (obj.disableNot) {
+        return joined;
+      }
+      return joined.replace(/to/g, 'to[.not]');
+    });
 };
 
 function create(context) {
@@ -362,7 +362,7 @@ function create(context) {
           possibleProperties[methodName]
         );
         const replacement = properties.includes('not')
-          ? formattedPossibleProperties[0].replace(/[\]\[]/g, '')
+          ? formattedPossibleProperties[0].replace(/\]|\[/g, '')
           : formattedPossibleProperties[0].replace(/\[\.not\]/, '');
 
         const range = [
