@@ -93,6 +93,8 @@ module.exports = {
     'import/no-named-export': 'off',
     'import/no-relative-parent-imports': 'off',
 
+    'json/*': ['error', {allowComments: true}],
+
     'unicorn/catch-error-name': 'off',
     'unicorn/custom-error-definition': 'error',
     'unicorn/error-message': 'error',
