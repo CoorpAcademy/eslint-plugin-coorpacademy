@@ -1,6 +1,9 @@
-const _ = require('lodash');
-const {merge} = require('eslint/lib/config/config-ops');
+const _ = require('lodash/fp');
 
-const combineConfigs = configs => _.reduce(configs, merge);
+const mergeArrayCustomizer = (objValue, srcValue) => {
+  if (_.isArray(objValue)) return _.union(srcValue, objValue);
+};
+
+const combineConfigs = _.reduce(_.mergeWith(mergeArrayCustomizer), undefined);
 
 module.exports = combineConfigs;
