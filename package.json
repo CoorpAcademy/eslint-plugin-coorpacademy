@@ -41,11 +41,11 @@
     "prettier": "1.16.4"
   },
   "peerDependencies": {
-    "eslint": ">=5"
+    "eslint": ">=6"
   },
   "devDependencies": {
     "ava": "^2.4.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.5.1",
     "eslint-ava-rule-tester": "^3.0.0",
     "eslint-find-rules": "^3.4.0",
     "eslint-plugin-self": "^1.2.0",
