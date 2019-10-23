@@ -1,6 +1,6 @@
 import test from 'ava';
 import avaRuleTester from 'eslint-ava-rule-tester';
-import rule from '../rules/no-dangerous-logs';
+import rule from '../src/rules/no-dangerous-logs';
 
 const ruleTester = avaRuleTester(test, {
   env: {

@@ -49,19 +49,8 @@
   },
   "files": [
     "index.js",
-    "config",
-    "rules",
-    "utils"
+    "src"
   ],
-  "nyc": {
-    "all": true,
-    "cache": true,
-    "check-coverage": true,
-    "lines": 100,
-    "statements": 100,
-    "functions": 100,
-    "branches": 100
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CoorpAcademy/eslint-plugin-coorpacademy.git"

@@ -20,7 +20,7 @@ const ignorePlugins = ['json'];
 const getUnusedRules = configName => {
   if (!allConfigs.includes(configName)) throw new Error(`unknown config named ${configName}`);
   const finderConfig = configName === 'core' ? {} : {omitCore: true};
-  const ruleFinder = getRuleFinder(`./config/${configName}.js`, finderConfig);
+  const ruleFinder = getRuleFinder(`${__dirname}/../src/config/${configName}.js`, finderConfig);
   return ruleFinder.getUnusedRules();
 };
 

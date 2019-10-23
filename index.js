@@ -1,5 +1,5 @@
 module.exports = {
-  combineConfigs: require('./utils/combine-configs'),
-  rules: require('./rules'),
-  configs: require('./config')
+  combineConfigs: require('./src/utils/combine-configs'),
+  rules: require('./src/rules'),
+  configs: require('./src/config')
 };

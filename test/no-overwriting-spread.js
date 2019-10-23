@@ -1,6 +1,6 @@
 import test from 'ava';
 import avaRuleTester from 'eslint-ava-rule-tester';
-import rule from '../rules/no-overwriting-spread';
+import rule from '../src/rules/no-overwriting-spread';
 
 const ruleTester = avaRuleTester(test, {
   parserOptions: {
