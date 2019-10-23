@@ -1,7 +1,5 @@
-const requireIndex = require('requireindex');
-
 module.exports = {
   combineConfigs: require('./utils/combine-configs'),
-  rules: requireIndex(__dirname + '/rules'),
-  configs: requireIndex(__dirname + '/config')
+  rules: require('./rules'),
+  configs: require('./config')
 };
