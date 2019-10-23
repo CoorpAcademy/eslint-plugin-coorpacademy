@@ -20,7 +20,7 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-react": "~7.4.0",
     "eslint-plugin-unicorn": "^4.0.2",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.15",
     "prettier": "1.16.4",
     "requireindex": "^1.2.0"
   },
@@ -28,12 +28,12 @@
     "eslint": ">=4"
   },
   "devDependencies": {
-    "ava": "^1.4.0",
+    "ava": "^2.4.0",
     "eslint": "^4.18.2",
     "eslint-ava-rule-tester": "^3.0.0",
     "eslint-find-rules": "^3.2.2",
     "flow-bin": "^0.67.1",
-    "nyc": "^11.2.1"
+    "nyc": "^14.1.1"
   },
   "scripts": {
     "test": "npm run lint && npm run test:unit && npm run find-missing",
