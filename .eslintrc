@@ -1,0 +1,4 @@
+{
+    "extends": ["plugin:self/core", "plugin:self/prettier"],
+    "plugins": ["self"]
+}

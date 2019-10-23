@@ -32,6 +32,7 @@
     "eslint": "^5.16.0",
     "eslint-ava-rule-tester": "^3.0.0",
     "eslint-find-rules": "^3.2.2",
+    "eslint-plugin-self": "^1.2.0",
     "flow-bin": "^0.67.1",
     "nyc": "^14.1.1"
   },
@@ -48,8 +49,8 @@
     "find-missing:flowtype": "eslint-find-rules -v --unused --no-core ./config/flowtype.js",
     "find-missing:css-modules": "eslint-find-rules -v --unused --no-core ./config/css-modules.js",
     "prettier-core": "prettier --print-width 100 --single-quote --no-bracket-spacing config/**/*.js rules/**/*.js test/**/*.js *.js",
-    "lint": "npm run prettier-core -s -- --list-different",
-    "lint:fix": "npm run prettier-core -- --write"
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "engines": {
     "node": ">=6.0.0"
