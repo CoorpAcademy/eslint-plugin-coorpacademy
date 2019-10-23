@@ -421,5 +421,6 @@ module.exports = {
   },
   settings: {
     'import/ignore': ['node_modules', '\\.css$']
-  }
+  },
+  reportUnusedDisableDirectives: true
 };
