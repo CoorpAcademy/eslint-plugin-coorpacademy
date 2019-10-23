@@ -400,7 +400,18 @@ module.exports = {
     'wrap-iife': ['error', 'any'],
     'wrap-regex': 'off',
     'yield-star-spacing': 'off',
-    yoda: ['error', 'never', {exceptRange: true}]
+    yoda: ['error', 'never', {exceptRange: true}],
+
+    // new ones from eslint@5
+    'max-classes-per-file': 'off',
+    'max-lines-per-function': 'off',
+    'no-async-promise-executor': 'error',
+    'no-misleading-character-class': 'error',
+    'no-useless-catch': 'error',
+    'prefer-named-capture-group': 'off',
+    'prefer-object-spread': 'off',
+    'require-atomic-updates': 'off', // broken with latest eslint
+    'require-unicode-regexp': 'off'
   },
   settings: {
     'import/ignore': ['node_modules', '\\.css$']
