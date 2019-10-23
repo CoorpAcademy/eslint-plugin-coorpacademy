@@ -28,19 +28,12 @@ jobs:
 
     - stage: find-missing
       name: find-missing-main
-      script:
-        - npm run find-missing:core
-        - npm run find-missing:prettier
-        - npm run find-missing:lodash-fp
+      script: npm run find-missing -- core prettier lodash-fp
 
     - stage: find-missing
       name: find-missing-tests
-      script:
-        - npm run find-missing:ava
-        - npm run find-missing:mocha
+      script: npm run find-missing -- ava mocha
 
     - stage: find-missing
       name: find-missing-front
-      script:
-        - npm run find-missing:css-modules
-        - npm run find-missing:flowtype
+      script: npm run find-missing -- css-modules flowtype

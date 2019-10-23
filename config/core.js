@@ -2,7 +2,8 @@ module.exports = {
   parserOptions: {
     sourceType: 'module'
   },
-  plugins: ['fp', 'import', 'json', 'promise', 'unicorn'],
+  plugins: ['fp', 'import', 'promise', 'unicorn'],
+  extends: ['plugin:json/recommended-with-comments'],
   rules: {
     'fp/no-arguments': 'off',
     'fp/no-class': 'error',
@@ -92,8 +93,6 @@ module.exports = {
     'import/no-cycle': 'error',
     'import/no-named-export': 'off',
     'import/no-relative-parent-imports': 'off',
-
-    'json/*': ['error', {allowComments: true}],
 
     'unicorn/catch-error-name': 'off',
     'unicorn/custom-error-definition': 'error',

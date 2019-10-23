@@ -40,15 +40,7 @@
   "scripts": {
     "test": "npm run lint && npm run test:unit && npm run find-missing",
     "test:unit": "nyc ava",
-    "find-missing": "npm run find-missing:core && npm run find-missing:ava && npm run find-missing:lodash-fp && npm run find-missing:react && npm run find-missing:mocha && npm run find-missing:prettier && npm run find-missing:css-modules && npm run find-missing:flowtype",
-    "find-missing:core": "eslint-find-rules -v --unused ./config/core.js",
-    "find-missing:ava": "eslint-find-rules -v --unused --no-core ./config/ava.js",
-    "find-missing:lodash-fp": "eslint-find-rules -v --unused --no-core ./config/lodash-fp.js",
-    "find-missing:mocha": "eslint-find-rules -v --unused --no-core ./config/mocha.js",
-    "find-missing:prettier": "eslint-find-rules -v --unused --no-core ./config/prettier.js",
-    "find-missing:react": "eslint-find-rules -v --unused --no-core ./config/react.js",
-    "find-missing:flowtype": "eslint-find-rules -v --unused --no-core ./config/flowtype.js",
-    "find-missing:css-modules": "eslint-find-rules -v --unused --no-core ./config/css-modules.js",
+    "find-missing": "node scripts/find-missing",
     "prettier-core": "prettier --print-width 100 --single-quote --no-bracket-spacing config/**/*.js rules/**/*.js test/**/*.js *.js",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix"
