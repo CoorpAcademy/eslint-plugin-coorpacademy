@@ -4,20 +4,36 @@ node_js:
 - '10'
 - '12'
 sudo: false
+cache: npm
 env:
   matrix:
-    - STEP='lint'
-    - STEP='test:unit'
-    - STEP='find-missing:ava'
-    - STEP='find-missing:core'
-    - STEP='find-missing:css-modules'
-    - STEP='find-missing:flowtype'
-    - STEP='find-missing:lodash-fp'
-    - STEP='find-missing:mocha'
-    - STEP='find-missing:prettier'
-    - STEP='find-missing:react'
+    - 'MISSING_SCOPE=ava'
+    - 'MISSING_SCOPE=core'
+    - 'MISSING_SCOPE=css-modules'
+    - 'MISSING_SCOPE=flowtype'
+    - 'MISSING_SCOPE=lodash-fp'
+    - 'MISSING_SCOPE=mocha'
+    - 'MISSING_SCOPE=prettier'
+    - 'MISSING_SCOPE=react'
 
-script:
-  - npm run $STEP
+stages:
+  - lint
+  - test
+  - find-missing
 
-cache: npm
+jobs:
+  include:
+    - stage: lint
+      name: lint
+      script: npm run lint
+      node_js: '10'
+      env: 'MISSING_SCOPE=none'
+    - stage: test
+      name: test-plugin
+      script: npm run test:unit
+      env: 'MISSING_SCOPE=none'
+
+    - stage: find-missing
+      name: find-missing-plugins
+      script: npm run find-missing:$MISSING_SCOPE
+      node_js: '10'
