@@ -32,9 +32,9 @@
     "ava": "^2.4.0",
     "eslint": "^5.16.0",
     "eslint-ava-rule-tester": "^3.0.0",
-    "eslint-find-rules": "^3.2.2",
+    "eslint-find-rules": "^3.4.0",
     "eslint-plugin-self": "^1.2.0",
-    "flow-bin": "^0.67.1",
+    "flow-bin": "^0.110.0",
     "nyc": "^14.1.1"
   },
   "scripts": {
