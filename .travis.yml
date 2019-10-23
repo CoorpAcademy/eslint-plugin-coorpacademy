@@ -1,20 +1,7 @@
 language: node_js
-node_js:
-- '8'
-- '10'
-- '12'
 sudo: false
+node_js: '10'
 cache: npm
-env:
-  matrix:
-    - 'MISSING_SCOPE=ava'
-    - 'MISSING_SCOPE=core'
-    - 'MISSING_SCOPE=css-modules'
-    - 'MISSING_SCOPE=flowtype'
-    - 'MISSING_SCOPE=lodash-fp'
-    - 'MISSING_SCOPE=mocha'
-    - 'MISSING_SCOPE=prettier'
-    - 'MISSING_SCOPE=react'
 
 stages:
   - lint
@@ -26,14 +13,34 @@ jobs:
     - stage: lint
       name: lint
       script: npm run lint
-      node_js: '10'
-      env: 'MISSING_SCOPE=none'
-    - stage: test
-      name: test-plugin
+
+    - &test
+      stage: test
+      name: test-plugin-node10
       script: npm run test:unit
-      env: 'MISSING_SCOPE=none'
+      node_js: '10'
+    - <<: *test
+      name: test-plugin-node12
+      node_js: '12'
+    - <<: *test
+      name: test-plugin-node8
+      node_js: '8'
 
     - stage: find-missing
-      name: find-missing-plugins
-      script: npm run find-missing:$MISSING_SCOPE
-      node_js: '10'
+      name: find-missing-main
+      script:
+        - npm run find-missing:core
+        - npm run find-missing:prettier
+        - npm run find-missing:lodash-fp
+
+    - stage: find-missing
+      name: find-missing-tests
+      script:
+        - npm run find-missing:ava
+        - npm run find-missing:mocha
+
+    - stage: find-missing
+      name: find-missing-front
+      script:
+        - npm run find-missing:css-modules
+        - npm run find-missing:flowtype
