@@ -1,10 +1,9 @@
-'use strict';
-
 module.exports = {
   parserOptions: {
     sourceType: 'module'
   },
-  plugins: ['fp', 'import', 'json', 'promise', 'unicorn'],
+  plugins: ['fp', 'import', 'promise', 'unicorn'],
+  extends: ['plugin:json/recommended-with-comments'],
   rules: {
     'fp/no-arguments': 'off',
     'fp/no-class': 'error',
@@ -84,7 +83,7 @@ module.exports = {
     'import/no-restricted-paths': 'off',
     'import/no-self-import': 'error',
     'import/no-unassigned-import': 'off',
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': ['error', {commonjs: true}],
     'import/no-useless-path-segments': 'error',
     'import/no-webpack-loader-syntax': 'error',
     'import/order': ['error', {'newlines-between': 'ignore'}],
@@ -94,6 +93,7 @@ module.exports = {
     'import/no-cycle': 'error',
     'import/no-named-export': 'off',
     'import/no-relative-parent-imports': 'off',
+    'import/no-unused-modules': 'off',
 
     'unicorn/catch-error-name': 'off',
     'unicorn/custom-error-definition': 'error',
@@ -402,9 +402,25 @@ module.exports = {
     'wrap-iife': ['error', 'any'],
     'wrap-regex': 'off',
     'yield-star-spacing': 'off',
-    yoda: ['error', 'never', {exceptRange: true}]
+    yoda: ['error', 'never', {exceptRange: true}],
+
+    // new ones from eslint@5&6
+    'max-classes-per-file': 'off',
+    'max-lines-per-function': 'off',
+    'no-async-promise-executor': 'error',
+    'no-misleading-character-class': 'error',
+    'no-useless-catch': 'error',
+    'prefer-named-capture-group': 'off',
+    'prefer-object-spread': 'off',
+    'require-atomic-updates': 'off', // broken with latest eslint
+    'require-unicode-regexp': 'off',
+    'default-param-last': 'error',
+    'function-call-argument-newline': 'off',
+    'no-import-assign': 'error',
+    'prefer-regex-literals': 'error'
   },
   settings: {
     'import/ignore': ['node_modules', '\\.css$']
-  }
+  },
+  reportUnusedDisableDirectives: true
 };

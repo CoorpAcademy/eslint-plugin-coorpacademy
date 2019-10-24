@@ -1,31 +1,39 @@
 language: node_js
-node_js:
-- '8'
 sudo: false
-env:
-  matrix:
-    - STEP='lint'
-    - STEP='test:unit'
-    - STEP='find-missing:ava'
-    - STEP='find-missing:core'
-    - STEP='find-missing:css-modules'
-    - STEP='find-missing:flowtype'
-    - STEP='find-missing:lodash-fp'
-    - STEP='find-missing:mocha'
-    - STEP='find-missing:prettier'
-    - STEP='find-missing:react'
+node_js: '10'
+cache: npm
 
-script:
-  - npm run $STEP
+stages:
+  - lint
+  - test
+  - find-missing
 
-cache:
-  directories:
-  - node_modules
-deploy:
-  provider: npm
-  email: dev@coorpacademy.com
-  api_key:
-    secure: O77PO/4g8RYj65t+z2YiMFa2fiYFZlk90vvC5puZPWNl/O8DXeNFssHPR5irmb41ivalLkPsBYziZVFeEDMX4mtMIKMXryleosXXWqa/jJ7hwrgtQn5txtw93vplfjKTvojYNpZShFjrKUvAoWmguaqBtIVVTytkZs0RRBL3ng63fs/eDkO55mHxv/YfOquychqr+FHSZXV4QniKPyV9BtCd2JYFog6Q5EBdeNlLWsTt2rfHGJnaFpiXCDuHttOLr8ccKuGU+SAsMt26zfvYNfaNOOWqZPC1ABZmPHTi543LdskyN6XDnhrs2Iy6kXS9V4LdzWddx+qTh80bYN+dFgHgXd0rquDOANAP7oCuzAP/f4nXdEGL7syp5KxYDwd4j26HLXuNJPafK2eKm0IQZNoMUYnRfRMPN925PHYFNcEEKSyE/6uK1fUZlqpS/WGv4LdB+wFXymyBob58NmE2errgMmV2uXTGAbHgd+M6xQ++G6W2rwBfaxrHfqXore6vVEyyB+fEem5qI7vo0ejevQBwkyy1Cc/h7rBjH226erSzJXWymyz08F0eyds6cYBa/OPC+pdiV05+E2qNw0KpKlIk5+ptrUly9lWlqwFHM5nPZYRpHiy7AhSNJ82uf8Fn7j2XNpciu2TSatCvBSsTVwDk+P5k0R/C2SpiOJPx7Lc=
-  on:
-    tags: true
-    repo: CoorpAcademy/eslint-plugin-coorpacademy
+jobs:
+  include:
+    - stage: lint
+      name: lint
+      script: npm run lint
+
+    - &test
+      stage: test
+      name: test-plugin-node10
+      script: npm run test:unit
+      node_js: '10'
+    - <<: *test
+      name: test-plugin-node12
+      node_js: '12'
+    - <<: *test
+      name: test-plugin-node8
+      node_js: '8'
+
+    - stage: find-missing
+      name: find-missing-main
+      script: npm run find-missing -- core prettier lodash-fp
+
+    - stage: find-missing
+      name: find-missing-tests
+      script: npm run find-missing -- ava mocha
+
+    - stage: find-missing
+      name: find-missing-front
+      script: npm run find-missing -- css-modules flowtype

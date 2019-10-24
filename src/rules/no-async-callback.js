@@ -1,5 +1,3 @@
-'use strict';
-
 const defaultCallbackNames = ['done', 'cb', 'callback', 'next'];
 
 function create(context) {

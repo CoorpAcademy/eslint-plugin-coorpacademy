@@ -1,0 +1,15 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": ["plugin:self/core", "plugin:self/prettier"],
+    "plugins": ["self"],
+    "rules": {
+        // disable rules introduced by this plugin, not found by self
+        "self/coorpacademy/no-async-callback": "off",
+        "self/coorpacademy/no-dangerous-logs": "off",
+        "self/coorpacademy/no-overwriting-spread": "off",
+        "unicorn/filename-case": "warn"
+    }
+}

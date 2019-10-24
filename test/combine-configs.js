@@ -1,5 +1,5 @@
 import test from 'ava';
-import combineConfigs from '../utils/combine-configs';
+import combineConfigs from '../src/utils/combine-configs';
 
 const baseConfig = Object.freeze({
   plugins: ['import'],

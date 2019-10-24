@@ -1,5 +1,3 @@
-'use strict';
-
 const _ = require('lodash/fp');
 
 const makeReport = (context, propertiesFieldKey, regularProperty, spreadProperty) => node => {
@@ -24,7 +22,7 @@ const makeReport = (context, propertiesFieldKey, regularProperty, spreadProperty
 function create(context) {
   return {
     JSXOpeningElement: makeReport(context, 'attributes', 'JSXAttribute', 'JSXSpreadAttribute'),
-    ObjectExpression: makeReport(context, 'properties', 'Property', 'ExperimentalSpreadProperty')
+    ObjectExpression: makeReport(context, 'properties', 'Property', 'SpreadElement')
   };
 }
 
