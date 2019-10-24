@@ -8,7 +8,7 @@ module.exports = {
     'mocha/max-top-level-suites': 'off',
     'mocha/no-exclusive-tests': 'error',
     'mocha/no-global-tests': 'error',
-    'mocha/no-hooks-for-single-case': ['error', {allow: ['after']}],
+    'mocha/no-hooks-for-single-case': 'off',
     'mocha/no-hooks': 'off',
     'mocha/no-identical-title': 'error',
     'mocha/no-mocha-arrows': 'error',
