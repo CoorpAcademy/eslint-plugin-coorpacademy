@@ -4,7 +4,7 @@ const loggerFunctions = ['log', 'info', 'warn', 'error'];
 function isDangerousProperty(node) {
   return (
     node.property.type === 'Identifier' &&
-    (['config'].indexOf(node.property.name) >= 0 ||
+    (['config'].includes(node.property.name) ||
       (node.property.name === 'env' &&
         node.object.type === 'Identifier' &&
         node.object.name === 'process'))
@@ -13,7 +13,7 @@ function isDangerousProperty(node) {
 
 function isDangerousData(node) {
   return (
-    (node.type === 'Identifier' && dangerousIdentifiers.indexOf(node.name) >= 0) ||
+    (node.type === 'Identifier' && dangerousIdentifiers.includes(node.name)) ||
     (node.type === 'MemberExpression' && isDangerousProperty(node))
   );
 }
@@ -23,7 +23,7 @@ function isLogCall(node) {
     (node.type === 'Identifier' && node.name === 'debug') ||
     (node.type === 'MemberExpression' &&
       node.property.type === 'Identifier' &&
-      loggerFunctions.indexOf(node.property.name) >= 0)
+      loggerFunctions.includes(node.property.name))
   );
 }
 
