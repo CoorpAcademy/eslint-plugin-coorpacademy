@@ -23,6 +23,7 @@ module.exports = {
     'mocha/valid-suite-description': 'off',
     'mocha/valid-test-description': 'off',
     'mocha/no-async-describe': 'error',
+    'mocha/no-return-from-async': 'error',
     'mocha/prefer-arrow-callback': 'off',
 
     'chai-expect/no-inner-compare': 'error',

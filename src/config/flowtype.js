@@ -37,7 +37,13 @@ module.exports = {
     'flowtype/array-style-complex-type': 'warn',
     'flowtype/array-style-simple-type': 'warn',
     'flowtype/require-compound-type-alias': 'warn',
-    'flowtype/no-mixed': 'warn'
+    'flowtype/no-mixed': 'warn',
+
+    'flowtype/arrow-parens': 'off',
+    'flowtype/require-indexer-name': 'off',
+    'flowtype/require-inexact-type': 'off',
+    'flowtype/require-readonly-react-props': 'warn',
+    'flowtype/spread-exact-type': 'warn'
   },
   settings: {
     flowtype: {

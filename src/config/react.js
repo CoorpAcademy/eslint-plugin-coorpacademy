@@ -83,6 +83,12 @@ module.exports = {
     'react/jsx-sort-default-props': 'error',
     'react/no-access-state-in-setstate': 'error',
     'react/no-this-in-sfc': 'error',
-    'react/no-unsafe': 'error'
+    'react/no-unsafe': 'error',
+    'react/jsx-curly-newline': 'off',
+    'react/jsx-no-useless-fragment': 'error',
+    'react/jsx-props-no-spreading': 'off',
+    'react/prefer-read-only-props': 'off',
+    'react/state-in-constructor': ['error', 'always'],
+    'react/static-property-placement': 'error'
   }
 };
