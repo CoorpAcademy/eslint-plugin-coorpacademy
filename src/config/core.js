@@ -140,6 +140,8 @@ module.exports = {
     'unicorn/prefer-text-content': 'error',
     'unicorn/prevent-abbreviations': 'off',
     // tried but too contraignant, even if --fix works
+    'unicorn/prefer-negative-index': 'error',
+    'unicorn/prefer-trim-start-end': 'error',
 
     'accessor-pairs': 'off',
     'array-bracket-newline': 'off',
@@ -440,7 +442,12 @@ module.exports = {
     'default-param-last': 'error',
     'function-call-argument-newline': 'off',
     'no-import-assign': 'error',
-    'prefer-regex-literals': 'error'
+    'prefer-regex-literals': 'error',
+    'grouped-accessor-pairs': 'error',
+    'no-constructor-return': 'error',
+    'no-dupe-else-if': 'error',
+    'no-setter-return': 'error',
+    'prefer-exponentiation-operator': 'off'
   },
   settings: {
     'import/ignore': ['node_modules', '\\.css$']
