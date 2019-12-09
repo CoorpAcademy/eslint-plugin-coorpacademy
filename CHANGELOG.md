@@ -45,6 +45,7 @@ ava/test-title-format was not activated, as ava/hooks-order
 - react/jsx-sort-default-props
 - react/no-this-in-sfc
 - react/no-unsafe
+- react/jsx-curly-newline (with following config: `{multiline: 'require', singleline: 'forbid'}`)
 
 ### flow
 Mis en warning le temps de statuer

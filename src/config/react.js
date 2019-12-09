@@ -84,7 +84,7 @@ module.exports = {
     'react/no-access-state-in-setstate': 'error',
     'react/no-this-in-sfc': 'error',
     'react/no-unsafe': 'error',
-    'react/jsx-curly-newline': 'off',
+    'react/jsx-curly-newline': ['error', {multiline: 'require', singleline: 'forbid'}],
     'react/jsx-no-useless-fragment': 'error',
     'react/jsx-props-no-spreading': 'off',
     'react/prefer-read-only-props': 'off',

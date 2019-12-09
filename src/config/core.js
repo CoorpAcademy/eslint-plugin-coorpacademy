@@ -100,7 +100,7 @@ module.exports = {
     'unicorn/consistent-function-scoping': 'error',
     'unicorn/custom-error-definition': 'error',
     'unicorn/error-message': 'error',
-    'unicorn/expiring-todo-comments': 'off', // TODO: maybe try it out, could be interesting
+    'unicorn/expiring-todo-comments': 'off',
     'unicorn/escape-case': 'error',
     'unicorn/explicit-length-check': 'error',
     'unicorn/filename-case': ['error', {case: 'kebabCase'}],
