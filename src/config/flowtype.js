@@ -33,7 +33,17 @@ module.exports = {
     'flowtype/space-before-generic-bracket': 'off',
     'flowtype/space-before-type-colon': 'off',
     'flowtype/type-import-style': 'off',
-    'flowtype/union-intersection-spacing': 'off'
+    'flowtype/union-intersection-spacing': 'off',
+    'flowtype/array-style-complex-type': 'warn',
+    'flowtype/array-style-simple-type': 'warn',
+    'flowtype/require-compound-type-alias': 'warn',
+    'flowtype/no-mixed': 'warn',
+
+    'flowtype/arrow-parens': 'off',
+    'flowtype/require-indexer-name': 'off',
+    'flowtype/require-inexact-type': 'off',
+    'flowtype/require-readonly-react-props': 'warn',
+    'flowtype/spread-exact-type': 'warn'
   },
   settings: {
     flowtype: {

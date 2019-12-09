@@ -32,6 +32,7 @@ if (!module.parent) {
   const configs =
     !process.argv[2] || /^\$?all$/i.test(process.argv[2]) ? allConfigs : process.argv.slice(2);
 
+  const brokenConfigs = [];
   for (const config of configs) {
     const unusedRules = _.pipe(
       getUnusedRules,
@@ -40,7 +41,11 @@ if (!module.parent) {
     if (!_.isEmpty(unusedRules)) {
       console.log(`Some rules are unused in ${config}`);
       unusedRules.forEach(rule => console.log(`- ${rule}`));
-      process.exit(1);
+      brokenConfigs.push(config);
     }
+  }
+  if (!_.isEmpty(brokenConfigs)) {
+    console.log(`Following configs are broken: ${brokenConfigs.join(', ')}`);
+    process.exit(1);
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@coorpacademy/eslint-plugin-coorpacademy",
-  "version": "9.0.1",
+  "version": "9.1.0-beta.0",
   "description": "Common ESLint config for Coorpacademy projects",
   "homepage": "https://github.com/CoorpAcademy/eslint-plugin-coorpacademy#readme",
   "main": "index.js",
@@ -20,36 +20,36 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "babel-eslint": "^8.2.2",
+    "babel-eslint": "^10.0.3",
     "eslint-ast-utils": "^1.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-ava": "^6.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-ava": "^9.0.0",
     "eslint-plugin-chai-expect": "^2.0.1",
-    "eslint-plugin-css-modules": "^2.7.5",
-    "eslint-plugin-flowtype": "~2.46.1",
-    "eslint-plugin-flowtype-errors": "^3.5.1",
+    "eslint-plugin-css-modules": "^2.11.0",
+    "eslint-plugin-flowtype": "~4.5.2",
+    "eslint-plugin-flowtype-errors": "^4.1.0",
     "eslint-plugin-fp": "^2.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-json": "^2.0.1",
     "eslint-plugin-lodash-fp": "^2.1.3",
-    "eslint-plugin-mocha": "^4.12.1",
-    "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-react": "~7.4.0",
-    "eslint-plugin-unicorn": "^4.0.2",
+    "eslint-plugin-mocha": "^6.2.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "~7.17.0",
+    "eslint-plugin-unicorn": "^14.0.1",
     "lodash": "^4.17.15",
     "prettier": "1.16.4"
   },
   "peerDependencies": {
-    "eslint": ">=6"
+    "eslint": ">=6.7"
   },
   "devDependencies": {
     "ava": "^2.4.0",
-    "eslint": "^6.5.1",
-    "eslint-ava-rule-tester": "^3.0.0",
+    "eslint": "^6.7.2",
+    "eslint-ava-rule-tester": "^4.0.0",
     "eslint-find-rules": "^3.4.0",
     "eslint-plugin-self": "^1.2.0",
-    "flow-bin": "^0.110.0",
+    "flow-bin": "^0.113.0",
     "nyc": "^14.1.1"
   },
   "scripts": {
