@@ -34,6 +34,18 @@ ruleTester.run(ruleId, rule, {
     {
       code: '{true || <div />}',
       errors: [error]
+    },
+    {
+      code: '{false && <div />}',
+      errors: [error]
+    },
+    {
+      code: '{undefined && <div />}',
+      errors: [error]
+    },
+    {
+      code: '{0 && <div />}',
+      errors: [error]
     }
   ]
 });
