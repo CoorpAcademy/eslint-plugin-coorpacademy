@@ -10,6 +10,7 @@
         "self/coorpacademy/no-async-callback": "off",
         "self/coorpacademy/no-dangerous-logs": "off",
         "self/coorpacademy/no-overwriting-spread": "off",
+        "self/coorpacademy/jsx-no-logical-expression": "off",
         "unicorn/filename-case": "warn"
     }
 }

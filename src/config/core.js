@@ -43,6 +43,7 @@ module.exports = {
     '@coorpacademy/coorpacademy/no-async-callback': 'error',
     '@coorpacademy/coorpacademy/no-dangerous-logs': 'error',
     '@coorpacademy/coorpacademy/no-overwriting-spread': 'error',
+    '@coorpacademy/coorpacademy/jsx-no-logical-expression': 'error',
 
     'import/default': 'error',
     'import/export': 'error',
