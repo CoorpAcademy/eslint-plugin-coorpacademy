@@ -23,7 +23,7 @@ const create = context => ({
       context.report({
         node,
         message: 'JSX should not use logical expression',
-        fix: createFixer(node, context)
+        fix: createFixer(node, context.getSourceCode().getText())
       });
     }
   }
@@ -31,6 +31,7 @@ const create = context => ({
 
 module.exports = {
   create,
+  createFixer,
   meta: {
     docs: {
       description: 'Prevent falsy values to be printed'

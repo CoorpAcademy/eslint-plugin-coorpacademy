@@ -29,22 +29,27 @@ ruleTester.run(ruleId, rule, {
   invalid: [
     {
       code: '{true && <div />}',
+      output: '{true ? <div /> : null}',
       errors: [error]
     },
     {
-      code: '{true || <div />}',
+      code: '{foo || <div />}',
+      output: '{foo ? foo : <div />}',
       errors: [error]
     },
     {
       code: '{false && <div />}',
+      output: '{false ? <div /> : null}',
       errors: [error]
     },
     {
       code: '{undefined && <div />}',
+      output: '{undefined ? <div /> : null}',
       errors: [error]
     },
     {
       code: '{0 && <div />}',
+      output: '{0 ? <div /> : null}',
       errors: [error]
     }
   ]
