@@ -89,6 +89,9 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/prefer-read-only-props': 'off',
     'react/state-in-constructor': ['error', 'always'],
-    'react/static-property-placement': 'error'
+    'react/static-property-placement': 'error',
+    'react/function-component-definition': 'off',
+    'react/jsx-no-script-url': 'error',
+    'react/no-adjacent-inline-elements': 'off'
   }
 };

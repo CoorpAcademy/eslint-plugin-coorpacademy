@@ -1,6 +1,19 @@
 # Changelog
 
 Here is list of rules modifications. (starting from v9)
+
+## 9.3
+### React
+Introduced:
+- react/jsx-no-script-url
+### Mocha
+Introduced
+- chai-expect/no-inner-literal
+
+## 9.2
+
+Introduced custom coorpacademy/jsx-no-logical-expression in the react scope
+
 ## 9.1
 ### core
 Introduced:

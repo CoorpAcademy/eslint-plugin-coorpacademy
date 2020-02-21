@@ -34,10 +34,7 @@ if (!module.parent) {
 
   const brokenConfigs = [];
   for (const config of configs) {
-    const unusedRules = _.pipe(
-      getUnusedRules,
-      filterIgnoreRules
-    )(config);
+    const unusedRules = _.pipe(getUnusedRules, filterIgnoreRules)(config);
     if (!_.isEmpty(unusedRules)) {
       console.log(`Some rules are unused in ${config}`);
       unusedRules.forEach(rule => console.log(`- ${rule}`));
