@@ -143,6 +143,13 @@ module.exports = {
     // tried but too contraignant, even if --fix works
     'unicorn/prefer-negative-index': 'error',
     'unicorn/prefer-trim-start-end': 'error',
+    'unicorn/better-regex': 'off', // too dangerous along even as 'warning' with autofixes
+    'unicorn/no-null': 'off',
+    'unicorn/prefer-modern-dom-apis': 'off',
+    'unicorn/prefer-number-properties': 'error',
+    'unicorn/prefer-replace-all': 'off', // still a TC39 draft when configured (May2020)
+    'unicorn/prefer-set-has': 'off',
+    'unicorn/string-content': 'off', // would need specific use cases
 
     'accessor-pairs': 'off',
     'array-bracket-newline': 'off',
