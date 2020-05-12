@@ -49,6 +49,7 @@
     "eslint": "^7.0.0",
     "eslint-ava-rule-tester": "^4.0.0",
     "eslint-find-rules": "^3.5.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-self": "^1.2.0",
     "flow-bin": "^0.124.0",
     "nyc": "^15.0.1"
