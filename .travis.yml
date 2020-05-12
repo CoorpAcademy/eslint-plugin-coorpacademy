@@ -23,8 +23,8 @@ jobs:
       name: test-plugin-node12
       node_js: '12'
     - <<: *test
-      name: test-plugin-node8
-      node_js: '8'
+      name: test-plugin-node14
+      node_js: '14'
 
     - stage: find-missing
       name: find-missing-main

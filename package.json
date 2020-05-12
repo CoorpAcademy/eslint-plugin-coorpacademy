@@ -17,7 +17,7 @@
     "url": "https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/issues"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.20.0"
   },
   "dependencies": {
     "babel-eslint": "^10.1.0",
