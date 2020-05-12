@@ -2,18 +2,9 @@ import test from 'ava';
 import avaRuleTester from 'eslint-ava-rule-tester';
 import rule from '../src/rules/no-dangerous-logs';
 
-const ruleTester = avaRuleTester(test, {
-  env: {
-    es6: true
-  }
-});
+const ruleTester = avaRuleTester(test, {env: {es6: true}});
 
-const errors = [
-  {
-    ruleId: 'no-dangerous-logs',
-    message: 'This logging statement may leak sensitive information'
-  }
-];
+const errors = [{message: 'This logging statement may leak sensitive information'}];
 
 ruleTester.run('no-dangerous-logs', rule, {
   valid: [

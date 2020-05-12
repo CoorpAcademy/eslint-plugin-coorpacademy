@@ -8,7 +8,6 @@ const ruleTester = avaRuleTester(test, {
   }
 });
 
-const ruleId = 'no-async-callback';
 const message = 'Do not use callback parameters inside an async function';
 
 ruleTester.run('no-async-callback', rule, {
@@ -29,7 +28,6 @@ ruleTester.run('no-async-callback', rule, {
       code: 'async function foo(cb) {}',
       errors: [
         {
-          ruleId,
           message,
           line: 1,
           column: 20
@@ -40,7 +38,6 @@ ruleTester.run('no-async-callback', rule, {
       code: 'async function foo(a, b, cb, d) {}',
       errors: [
         {
-          ruleId,
           message,
           line: 1,
           column: 26
@@ -51,7 +48,6 @@ ruleTester.run('no-async-callback', rule, {
       code: 'async function foo(done) {}',
       errors: [
         {
-          ruleId,
           message,
           line: 1,
           column: 20
@@ -62,7 +58,6 @@ ruleTester.run('no-async-callback', rule, {
       code: 'async function foo(callback) {}',
       errors: [
         {
-          ruleId,
           message,
           line: 1,
           column: 20
@@ -73,7 +68,6 @@ ruleTester.run('no-async-callback', rule, {
       code: 'async function foo(next) {}',
       errors: [
         {
-          ruleId,
           message,
           line: 1,
           column: 20
@@ -84,7 +78,6 @@ ruleTester.run('no-async-callback', rule, {
       code: 'async (foo, cb) => {}',
       errors: [
         {
-          ruleId,
           message,
           line: 1,
           column: 13
@@ -95,7 +88,6 @@ ruleTester.run('no-async-callback', rule, {
       code: 'foo(async function(cb) {})',
       errors: [
         {
-          ruleId,
           message,
           line: 1,
           column: 20
@@ -107,7 +99,6 @@ ruleTester.run('no-async-callback', rule, {
       options: [{callbacks: ['bar', 'baz']}],
       errors: [
         {
-          ruleId,
           message,
           line: 1,
           column: 20
@@ -119,7 +110,6 @@ ruleTester.run('no-async-callback', rule, {
       options: [{callbacks: ['bar', 'baz']}],
       errors: [
         {
-          ruleId,
           message,
           line: 1,
           column: 20

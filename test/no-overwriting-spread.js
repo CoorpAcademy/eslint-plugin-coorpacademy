@@ -11,16 +11,13 @@ const ruleTester = avaRuleTester(test, {
   }
 });
 
-const ruleId = 'no-overwriting-spread';
 const message = 'Set individual properties after the spread properties';
 
 const objectError = {
-  ruleId,
   message,
   type: 'ObjectExpression'
 };
 const jsxError = {
-  ruleId,
   message,
   type: 'JSXOpeningElement'
 };
