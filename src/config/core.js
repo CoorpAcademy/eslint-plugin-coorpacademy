@@ -5,8 +5,7 @@ module.exports = {
     ecmaVersion: 2015,
     sourceType: 'module'
   },
-  plugins: ['fp', 'import', 'promise', 'unicorn', 'node'],
-  extends: ['plugin:json/recommended-with-comments'],
+  plugins: ['fp', 'import', 'promise', 'unicorn', 'node', 'json'],
   rules: {
     'fp/no-arguments': 'off',
     'fp/no-class': 'error',
@@ -507,5 +506,13 @@ module.exports = {
   settings: {
     'import/ignore': ['node_modules', '\\.css$']
   },
+  overrides: [
+    {
+      files: ['*.json'],
+      rules: {
+        'json/*': ['error', {allowComments: true}]
+      }
+    }
+  ],
   reportUnusedDisableDirectives: true
 };
