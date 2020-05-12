@@ -1,6 +1,6 @@
 const createFixer = ({range, left, right, operator}, source) => fixer => {
-  const {start: leftStart, end: leftEnd} = left;
-  const {start: rightStart} = right;
+  const [leftStart, leftEnd] = left.range;
+  const [rightStart] = right.range;
   const operatorRange = [leftEnd, rightStart];
   const operatorText = source.slice(...operatorRange);
 
