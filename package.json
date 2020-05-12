@@ -39,7 +39,7 @@
     "eslint-plugin-react": "~7.19.0",
     "eslint-plugin-unicorn": "^19.0.1",
     "lodash": "^4.17.15",
-    "prettier": "1.19.1"
+    "prettier": "2.0.5"
   },
   "peerDependencies": {
     "eslint": ">=7.0"
