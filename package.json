@@ -20,6 +20,7 @@
     "node": ">=10.20.0"
   },
   "dependencies": {
+    "@ava/babel": "^1.0.1",
     "babel-eslint": "^10.1.0",
     "eslint-ast-utils": "^1.1.0",
     "eslint-config-prettier": "^6.10.0",
@@ -44,13 +45,13 @@
     "eslint": ">=6.8"
   },
   "devDependencies": {
-    "ava": "^2.4.0",
+    "ava": "^3.8.2",
     "eslint": "^7.0.0",
     "eslint-ava-rule-tester": "^4.0.0",
-    "eslint-find-rules": "^3.4.0",
+    "eslint-find-rules": "^3.5.0",
     "eslint-plugin-self": "^1.2.0",
-    "flow-bin": "^0.118.0",
-    "nyc": "^15.0.0"
+    "flow-bin": "^0.124.0",
+    "nyc": "^15.0.1"
   },
   "scripts": {
     "test": "npm run lint && npm run test:unit && npm run find-missing",
@@ -63,5 +64,8 @@
   "files": [
     "index.js",
     "src"
-  ]
+  ],
+  "ava": {
+    "babel": true
+  }
 }
