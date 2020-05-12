@@ -448,7 +448,11 @@ module.exports = {
     'no-constructor-return': 'error',
     'no-dupe-else-if': 'error',
     'no-setter-return': 'error',
-    'prefer-exponentiation-operator': 'off'
+    'prefer-exponentiation-operator': 'off',
+    // new ones from eslint@7
+    'default-case-last': 'error',
+    'no-restricted-exports': 'off',
+    'no-useless-backreference': 'error'
   },
   settings: {
     'import/ignore': ['node_modules', '\\.css$']
