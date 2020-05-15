@@ -11,16 +11,14 @@ const ruleTester = avaRuleTester(test, {
   }
 });
 
-const ruleId = 'jsx-no-logical-expression';
 const message = 'JSX should not use logical expression';
 
 const error = {
-  ruleId,
   message,
   type: 'LogicalExpression'
 };
 
-ruleTester.run(ruleId, rule, {
+ruleTester.run('jsx-no-logical-expression', rule, {
   valid: [
     '{true ? <div /> : null}',
     '{false || false ? <div /> : null}',

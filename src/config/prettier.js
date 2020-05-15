@@ -8,7 +8,9 @@ module.exports = {
       {
         singleQuote: true,
         printWidth: 100,
-        bracketSpacing: false
+        bracketSpacing: false,
+        trailingComma: 'none',
+        arrowParens: 'avoid'
       }
     ]
   })
