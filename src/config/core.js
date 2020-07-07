@@ -45,7 +45,7 @@ module.exports = {
     '@coorpacademy/coorpacademy/no-dangerous-logs': 'error',
     '@coorpacademy/coorpacademy/no-overwriting-spread': 'error',
     '@coorpacademy/coorpacademy/jsx-no-logical-expression': 'error',
-    '@coorpacademy/coorpacademy/no-promise-all': 'error',
+    '@coorpacademy/coorpacademy/no-promise-all': 'off',
 
     'import/default': 'error',
     'import/export': 'error',

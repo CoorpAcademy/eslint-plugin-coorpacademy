@@ -14,7 +14,7 @@ function create(context) {
       if (isPromiseAll(node.callee))
         context.report({
           node,
-          message: 'Use sequence or traverse instead of promise all'
+          message: 'Use pSettle like logic instead of promise.all'
         });
     }
   };
@@ -22,5 +22,7 @@ function create(context) {
 
 module.exports = {
   create,
-  meta: {}
+  meta: {
+    description: 'Prevent use of promise.all for promise resolution'
+  }
 };

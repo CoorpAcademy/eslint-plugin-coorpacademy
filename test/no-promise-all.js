@@ -8,7 +8,7 @@ const ruleTester = avaRuleTester(test, {
   }
 });
 
-const errors = [{message: 'Use sequence or traverse instead of promise all'}];
+const errors = [{message: 'Use pSettle like logic instead of promise.all'}];
 
 ruleTester.run('no-promise-all', rule, {
   valid: ['Promise.resolve()', 'foo.promise()', 'Promise.race()', 'Promise.reject()'],
