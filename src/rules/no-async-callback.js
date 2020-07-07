@@ -15,6 +15,7 @@ function create(context) {
       });
     }
   };
+
   return {
     ArrowFunctionExpression: checkFunction,
     FunctionDeclaration: checkFunction,
