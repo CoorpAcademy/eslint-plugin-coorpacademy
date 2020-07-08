@@ -4,6 +4,13 @@ Here is list of rules modifications. (starting from v9)
 
 ## 10
 
+## [10.1](https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/releases/tag/v10.1.0)
+### Added
+
+New custom rule `no-promise-all` to activate on demand [#45](https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/pull/45)
+
+## [10.0](https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/releases/tag/v10.0.0)
+
 ### Changes
 - Drop node v8 support, 10.20.0 being the minimal node version required.
 - Eslint v7 minimum.
