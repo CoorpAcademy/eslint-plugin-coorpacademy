@@ -29,7 +29,8 @@ test('index should contain all rules', t => {
       'no-async-callback',
       'no-dangerous-logs',
       'no-overwriting-spread',
-      'jsx-no-logical-expression'
+      'jsx-no-logical-expression',
+      'no-promise-all'
     ].sort()
   );
 });
