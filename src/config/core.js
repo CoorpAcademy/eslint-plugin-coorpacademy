@@ -152,6 +152,9 @@ module.exports = {
     'unicorn/prefer-replace-all': 'off', // still a TC39 draft when configured (May2020)
     'unicorn/prefer-set-has': 'off',
     'unicorn/string-content': 'off', // would need specific use cases
+    'unicorn/no-reduce': 'off',
+    'unicorn/no-useless-undefined': 'off',
+    'unicorn/prefer-optional-catch-binding': 'off',
 
     'accessor-pairs': 'off',
     'array-bracket-newline': 'off',
