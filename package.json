@@ -46,13 +46,13 @@
     "eslint": ">=7.0"
   },
   "devDependencies": {
-    "ava": "^3.8.2",
-    "eslint": "^7.0.0",
+    "ava": "^3.10.1",
+    "eslint": "^7.4.0",
     "eslint-ava-rule-tester": "^4.0.0",
-    "eslint-find-rules": "^3.5.0",
-    "eslint-plugin-self": "^1.2.0",
-    "flow-bin": "^0.124.0",
-    "nyc": "^15.0.1"
+    "eslint-find-rules": "^3.6.0",
+    "eslint-plugin-self": "^1.2.1",
+    "flow-bin": "^0.129.0",
+    "nyc": "^15.1.0"
   },
   "scripts": {
     "test": "npm run lint && npm run test:unit && npm run find-missing",
