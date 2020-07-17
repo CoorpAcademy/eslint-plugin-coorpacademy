@@ -152,6 +152,9 @@ module.exports = {
     'unicorn/prefer-replace-all': 'off', // still a TC39 draft when configured (May2020)
     'unicorn/prefer-set-has': 'off',
     'unicorn/string-content': 'off', // would need specific use cases
+    'unicorn/no-reduce': 'off',
+    'unicorn/no-useless-undefined': 'off',
+    'unicorn/prefer-optional-catch-binding': 'off',
 
     'accessor-pairs': 'off',
     'array-bracket-newline': 'off',
@@ -462,6 +465,10 @@ module.exports = {
     'default-case-last': 'error',
     'no-restricted-exports': 'off',
     'no-useless-backreference': 'error',
+    'id-denylist': 'off', // could be use to disallow some specific identifiers (https://eslint.org/docs/rules/id-denylist)
+    'no-loss-of-precision': 'error',
+    'no-promise-executor-return': 'error',
+    'no-unreachable-loop': 'error',
 
     // node rules migrated from eslint core
     'node/callback-return': ['error', ['callback', 'cb', 'next']],

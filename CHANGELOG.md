@@ -4,6 +4,13 @@ Here is list of rules modifications. (starting from v9)
 
 ## 10
 
+## to come
+### Added
+Activated eslint core rules:
+- no-loss-of-precision
+- no-promise-executor-return
+- no-unreachable-loop
+
 ## [10.1](https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/releases/tag/v10.1.0)
 ### Added
 
