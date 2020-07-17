@@ -4,7 +4,7 @@ Here is list of rules modifications. (starting from v9)
 
 ## 10
 
-## to come
+## [10.2](https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/releases/tag/v10.2.0)
 ### Added
 Activated eslint core rules:
 - no-loss-of-precision
