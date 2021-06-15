@@ -1,21 +1,23 @@
-const createFixer = ({range, left, right, operator}, source) => fixer => {
-  const [leftStart, leftEnd] = left.range;
-  const [rightStart] = right.range;
-  const operatorRange = [leftEnd, rightStart];
-  const operatorText = source.slice(...operatorRange);
+const createFixer =
+  ({range, left, right, operator}, source) =>
+  fixer => {
+    const [leftStart, leftEnd] = left.range;
+    const [rightStart] = right.range;
+    const operatorRange = [leftEnd, rightStart];
+    const operatorText = source.slice(...operatorRange);
 
-  if (operator === '||') {
-    const leftText = source.slice(leftStart, leftEnd);
+    if (operator === '||') {
+      const leftText = source.slice(leftStart, leftEnd);
+      return [
+        fixer.replaceTextRange(operatorRange, operatorText.replace(operator, `? ${leftText} :`))
+      ];
+    }
+
     return [
-      fixer.replaceTextRange(operatorRange, operatorText.replace(operator, `? ${leftText} :`))
+      fixer.replaceTextRange(operatorRange, operatorText.replace(operator, '?')),
+      fixer.insertTextAfterRange(range, ' : null')
     ];
-  }
-
-  return [
-    fixer.replaceTextRange(operatorRange, operatorText.replace(operator, '?')),
-    fixer.insertTextAfterRange(range, ' : null')
-  ];
-};
+  };
 
 const create = context => ({
   LogicalExpression: node => {
