@@ -43,7 +43,14 @@ module.exports = {
     'flowtype/require-indexer-name': 'off',
     'flowtype/require-inexact-type': 'off',
     'flowtype/require-readonly-react-props': 'warn',
-    'flowtype/spread-exact-type': 'warn'
+    'flowtype/spread-exact-type': 'warn',
+
+    // deactivated rules from latest plugin update. (flow config might be decommissionned)
+    'flowtype-errors/uncovered': 'off',
+    'flowtype/no-internal-flow-type': 'off',
+    'flowtype/object-type-curly-spacing': 'off',
+    'flowtype/quotes': 'off',
+    'flowtype/use-read-only-spread': 'off'
   },
   settings: {
     flowtype: {

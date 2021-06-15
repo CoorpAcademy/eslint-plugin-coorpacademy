@@ -35,7 +35,9 @@ More details [in blog post announcing the release, here](https://eslint.org/blog
 
 New core eslint rules:
 - default-case-last
-- no-useless-backreference'
+- no-useless-backreference
+- no-nonoctal-decimal-escape
+- no-unsafe-optional-chaining
 
 #### Prettier v2
 Some fundamental changed were introduced is was not possible for all of them to be opted out when we wanted.
