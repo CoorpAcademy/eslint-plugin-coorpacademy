@@ -92,9 +92,9 @@ module.exports = {
     'react/static-property-placement': 'error',
     'react/function-component-definition': 'off',
     'react/jsx-no-script-url': 'error',
-    'react/no-adjacent-inline-elements': 'off',
+    'react/no-adjacent-inline-elements': 'off', // cannot activate it, conflict with prettier
     'react/jsx-newline': 'off',
-    'react/jsx-no-constructed-context-values': 'off',
-    'react/no-unstable-nested-components': 'off'
+    'react/jsx-no-constructed-context-values': 'error',
+    'react/no-unstable-nested-components': 'error'
   }
 };
