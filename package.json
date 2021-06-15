@@ -43,13 +43,13 @@
     "prettier": "2.3.1"
   },
   "peerDependencies": {
-    "eslint": ">=7.4"
+    "eslint": ">=7.28"
   },
   "devDependencies": {
-    "ava": "^3.10.1",
-    "eslint": "^7.4.0",
+    "ava": "^3.15.0",
+    "eslint": "^7.28.0",
     "eslint-ava-rule-tester": "^4.0.0",
-    "eslint-find-rules": "^3.6.0",
+    "eslint-find-rules": "^3.6.1",
     "eslint-plugin-self": "^1.2.1",
     "flow-bin": "^0.129.0",
     "nyc": "^15.1.0"
