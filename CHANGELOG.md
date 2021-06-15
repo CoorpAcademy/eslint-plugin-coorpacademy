@@ -3,6 +3,13 @@
 Here is list of rules modifications. (starting from v9)
 
 ## 10
+## [10.3](https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/releases/tag/v10.3.0)
+
+Activated rules:
+- no-nonoctal-decimal-escape
+- no-unsafe-optional-chaining
+- react/jsx-no-constructed-context-values
+- react/no-unstable-nested-components
 
 ## [10.2](https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/releases/tag/v10.2.0)
 ### Added
@@ -35,7 +42,7 @@ More details [in blog post announcing the release, here](https://eslint.org/blog
 
 New core eslint rules:
 - default-case-last
-- no-useless-backreference'
+- no-useless-backreference
 
 #### Prettier v2
 Some fundamental changed were introduced is was not possible for all of them to be opted out when we wanted.

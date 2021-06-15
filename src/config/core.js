@@ -98,6 +98,8 @@ module.exports = {
     'import/no-named-export': 'off',
     'import/no-relative-parent-imports': 'off',
     'import/no-unused-modules': 'off',
+    'import/no-import-module-exports': 'off',
+    'import/no-relative-packages': 'off',
 
     'unicorn/catch-error-name': 'off',
     'unicorn/consistent-function-scoping': 'error',
@@ -469,6 +471,9 @@ module.exports = {
     'no-loss-of-precision': 'error',
     'no-promise-executor-return': 'error',
     'no-unreachable-loop': 'error',
+
+    'no-nonoctal-decimal-escape': 'error',
+    'no-unsafe-optional-chaining': 'error',
 
     // node rules migrated from eslint core
     'node/callback-return': ['error', ['callback', 'cb', 'next']],

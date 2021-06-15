@@ -1,3 +1,8 @@
+tmp
+private
+.idea
+.vscode
+
 # Logs
 logs
 *.log
