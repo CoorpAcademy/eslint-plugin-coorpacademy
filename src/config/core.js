@@ -50,7 +50,18 @@ module.exports = {
     'import/default': 'error',
     'import/export': 'error',
     'import/exports-last': 'off',
-    'import/extensions': 'error',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        json: 'ignorePackages'
+      }
+    ],
     'import/first': 'error',
     'import/group-exports': 'off',
     'import/imports-first': 'error',
