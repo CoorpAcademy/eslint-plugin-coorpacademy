@@ -3,6 +3,9 @@
         "es6": true,
         "node": true
     },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
     "extends": ["plugin:self/core", "plugin:self/prettier"],
     "plugins": ["self"],
     "rules": {
@@ -21,7 +24,13 @@
                 "node/no-unsupported-features/es-syntax": ["error", {
                     "version": ">=12.22.0",
                     "ignores": ["modules"]
+                }],
+                "node/no-missing-require": ["error", {
+                    "allowModules": ["ava"]
                 }]
+            },
+            "settings": {
+                "import/core-modules": ["ava"]
             }
         },
         {

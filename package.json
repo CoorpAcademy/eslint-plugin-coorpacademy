@@ -20,8 +20,6 @@
     "node": ">=12.22.0"
   },
   "dependencies": {
-    "@ava/babel": "^1.0.1",
-    "babel-eslint": "^10.1.0",
     "eslint-ast-utils": "^1.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-ava": "^13.2.0",
@@ -45,15 +43,15 @@
   },
   "devDependencies": {
     "ava": "^4.0.1",
+    "c8": "^7.11.0",
     "eslint": "^8.8.0",
     "eslint-ava-rule-tester": "^4.0.0",
     "eslint-find-rules": "^4.1.0",
-    "eslint-plugin-self": "^1.2.1",
-    "nyc": "^15.1.0"
+    "eslint-plugin-self": "^1.2.1"
   },
   "scripts": {
     "test": "npm run lint && npm run test:unit && npm run find-missing",
-    "test:unit": "nyc ava",
+    "test:unit": "c8 ava",
     "find-missing": "node scripts/find-missing",
     "prettier-core": "prettier --print-width 100 --single-quote --no-bracket-spacing config/**/*.js rules/**/*.js test/**/*.js *.js",
     "lint": "eslint .",
@@ -62,8 +60,5 @@
   "files": [
     "index.js",
     "src"
-  ],
-  "ava": {
-    "babel": true
-  }
+  ]
 }

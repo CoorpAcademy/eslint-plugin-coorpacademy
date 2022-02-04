@@ -1,5 +1,5 @@
-import test from 'ava/entrypoints/main.mjs';
-import m from '..';
+const test = require('ava');
+const m = require('..');
 
 test('index should contain combineConfigs function', t => {
   t.is(typeof m.combineConfigs, 'function');
@@ -8,17 +8,7 @@ test('index should contain combineConfigs function', t => {
 test('index should contain all configurations', t => {
   t.deepEqual(
     Object.keys(m.configs).sort(),
-    [
-      'ava',
-      'core',
-      'es20XX',
-      'flowtype',
-      'lodash-fp',
-      'mocha',
-      'prettier',
-      'react',
-      'css-modules'
-    ].sort()
+    ['ava', 'core', 'es20XX', 'lodash-fp', 'mocha', 'prettier', 'react', 'css-modules'].sort()
   );
 });
 

@@ -1,5 +1,5 @@
-import test from 'ava/entrypoints/main.mjs';
-import combineConfigs from '../src/utils/combine-configs';
+const test = require('ava');
+const combineConfigs = require('../src/utils/combine-configs');
 
 const baseConfig = Object.freeze({
   plugins: ['import'],
