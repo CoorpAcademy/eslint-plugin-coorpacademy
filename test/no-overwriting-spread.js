@@ -1,6 +1,6 @@
-import test from 'ava/entrypoints/main.mjs';
-import avaRuleTester from 'eslint-ava-rule-tester';
-import rule from '../src/rules/no-overwriting-spread';
+const test = require('ava');
+const avaRuleTester = require('eslint-ava-rule-tester');
+const rule = require('../src/rules/no-overwriting-spread');
 
 const ruleTester = avaRuleTester(test, {
   parserOptions: {
