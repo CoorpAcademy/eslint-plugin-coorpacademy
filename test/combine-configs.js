@@ -1,4 +1,4 @@
-import test from 'ava';
+import test from 'ava/entrypoints/main.mjs';
 import combineConfigs from '../src/utils/combine-configs';
 
 const baseConfig = Object.freeze({
