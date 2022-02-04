@@ -1,4 +1,4 @@
-import test from 'ava';
+import test from 'ava/entrypoints/main.mjs';
 import m from '..';
 
 test('index should contain combineConfigs function', t => {

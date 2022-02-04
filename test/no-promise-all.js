@@ -1,4 +1,4 @@
-import test from 'ava';
+import test from 'ava/entrypoints/main.mjs';
 import avaRuleTester from 'eslint-ava-rule-tester';
 import rule from '../src/rules/no-promise-all';
 
