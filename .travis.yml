@@ -18,39 +18,34 @@ jobs:
       stage: test
       name: test-plugin-node16
       script: npm run test:unit
-      node_js: '16'
+      node_js: 16
     - <<: *test
       name: test-plugin-node18
-      node_js: '18'
+      node_js: 18
 
-    - stage: find-missing
-      name: find-missing-main
-      script: npm run find-missing -- ava
-
-    - stage: find-missing
-      name: find-missing-main
-      script: npm run find-missing -- core
-
-    - stage: find-missing
-      name: find-missing-main
-      script: npm run find-missing -- css-modules
-
-    - stage: find-missing
-      name: find-missing-main
-      script: npm run find-missing -- es20XX
-
-    - stage: find-missing
-      name: find-missing-main
-      script: npm run find-missing -- lodash-fp
-
-    - stage: find-missing
-      name: find-missing-main
-      script: npm run find-missing -- mocha
-
-    - stage: find-missing
-      name: find-missing-main
-      script: npm run find-missing -- prettier
-
-    - stage: find-missing
-      name: find-missing-main
-      script: npm run find-missing -- react
+    - &find-missing
+      stage: find-missing
+      name: find-missing-ava
+      env: CONFIG=ava
+      script: npm run find-missing -- $CONFIG
+    - <<: *find-missing
+      name: find-missing-core
+      env: CONFIG=core
+    - <<: *find-missing
+      name: find-missing-css-modules
+      env: CONFIG=css-modules
+    - <<: *find-missing
+      name: find-missing-es20XX
+      env: CONFIG=es20XX
+    - <<: *find-missing
+      name: find-missing-lodash-fp
+      env: CONFIG=lodash-fp
+    - <<: *find-missing
+      name: find-missing-mocha
+      env: CONFIG=mocha
+    - <<: *find-missing
+      name: find-missing-prettier
+      env: CONFIG=prettier
+    - <<: *find-missing
+      name: find-missing-react
+      env: CONFIG=react
