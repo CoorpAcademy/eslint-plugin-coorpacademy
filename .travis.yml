@@ -1,6 +1,6 @@
 language: node_js
-sudo: false
-node_js: '12'
+dist: jammy
+node_js: 16
 cache: npm
 
 stages:
@@ -16,21 +16,41 @@ jobs:
 
     - &test
       stage: test
-      name: test-plugin-node12
+      name: test-plugin-node16
       script: npm run test:unit
-      node_js: '12'
+      node_js: '16'
     - <<: *test
-      name: test-plugin-node14
-      node_js: '14'
+      name: test-plugin-node18
+      node_js: '18'
 
     - stage: find-missing
       name: find-missing-main
-      script: npm run find-missing -- core prettier lodash-fp
+      script: npm run find-missing -- ava
 
     - stage: find-missing
-      name: find-missing-tests
-      script: npm run find-missing -- ava mocha
+      name: find-missing-main
+      script: npm run find-missing -- core
 
     - stage: find-missing
-      name: find-missing-front
-      script: npm run find-missing -- css-modules flowtype
+      name: find-missing-main
+      script: npm run find-missing -- css-modules
+
+    - stage: find-missing
+      name: find-missing-main
+      script: npm run find-missing -- es20XX
+
+    - stage: find-missing
+      name: find-missing-main
+      script: npm run find-missing -- lodash-fp
+
+    - stage: find-missing
+      name: find-missing-main
+      script: npm run find-missing -- mocha
+
+    - stage: find-missing
+      name: find-missing-main
+      script: npm run find-missing -- prettier
+
+    - stage: find-missing
+      name: find-missing-main
+      script: npm run find-missing -- react

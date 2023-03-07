@@ -1,6 +1,6 @@
 module.exports = {
   parserOptions: {
-    ecmaVersion: 2015,
+    ecmaVersion: 2021,
     sourceType: 'module'
   },
   plugins: ['css-modules'],

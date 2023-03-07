@@ -4,7 +4,7 @@
         "node": true
     },
     "parserOptions": {
-      "ecmaVersion": 2018
+      "ecmaVersion": 2021
     },
     "extends": ["plugin:self/core", "plugin:self/prettier"],
     "plugins": ["self"],
@@ -22,7 +22,7 @@
             "files": ["test/**/*.js"],
             "rules": {
                 "node/no-unsupported-features/es-syntax": ["error", {
-                    "version": ">=12.22.0",
+                    "version": ">=16.3",
                     "ignores": ["modules"]
                 }],
                 "node/no-missing-require": ["error", {

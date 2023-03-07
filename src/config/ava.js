@@ -4,7 +4,7 @@ module.exports = {
   },
   plugins: ['ava'],
   parserOptions: {
-    ecmaVersion: 2015,
+    ecmaVersion: 2021,
     sourceType: 'module'
   },
   rules: {
