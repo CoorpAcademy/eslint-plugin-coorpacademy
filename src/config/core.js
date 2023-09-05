@@ -1,11 +1,24 @@
 const DEPRECATED = 'off';
 
+const EXTENSIONS = [
+  '.js',
+  '.cjs',
+  '.mjs',
+  '.jsx',
+  '.ts',
+  '.tsx',
+  '.json',
+  '.node',
+  '.yml',
+  '.yaml'
+];
+
 module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module'
   },
-  plugins: ['fp', 'import', 'promise', 'unicorn', 'node', 'json'],
+  plugins: ['fp', 'import', 'promise', 'unicorn', 'n', 'json'],
   rules: {
     'fp/no-arguments': 'off',
     'fp/no-class': 'error',
@@ -564,52 +577,56 @@ module.exports = {
     'no-unsafe-optional-chaining': 'error',
 
     // node rules migrated from eslint core
-    'node/callback-return': ['error', ['callback', 'cb', 'next']],
-    'node/global-require': 'off',
-    'node/handle-callback-err': 'off',
-    'node/no-mixed-requires': 'off',
-    'node/no-new-require': 'off',
-    'node/no-path-concat': 'off',
-    'node/no-process-env': 'off',
-    'node/no-sync': 'off',
-    'node/no-process-exit': 'off',
-
-    // new node rules
-    'node/no-deprecated-api': 'error', // list of forbidden api: https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-deprecated-api.md
-    'node/exports-style': ['error', 'module.exports'],
-    'node/file-extension-in-import': ['error', 'always', {'.js': 'never', '.ts': 'never'}],
-    'node/no-callback-literal': 'error',
-    'node/no-exports-assign': 'error',
-    'node/no-extraneous-import': 'error',
-    'node/no-extraneous-require': 'error',
-    'node/no-missing-import': 'error',
-    'node/no-missing-require': 'error',
-    'node/no-restricted-import': 'off',
-    'node/no-restricted-require': 'off',
-    'node/no-unpublished-bin': 'off',
-    'node/no-unpublished-import': 'off',
-    'node/no-unpublished-require': 'off',
-    'node/no-unsupported-features/es-builtins': 'error',
-    'node/no-unsupported-features/es-syntax': 'error',
-    'node/no-unsupported-features/node-builtins': 'error',
-    'node/prefer-global/buffer': 'error',
-    'node/prefer-global/console': 'error',
-    'node/prefer-global/process': 'error',
-    'node/prefer-global/text-decoder': 'error',
-    'node/prefer-global/text-encoder': 'error',
-    'node/prefer-global/url': 'error',
-    'node/prefer-global/url-search-params': 'error',
-    'node/prefer-promises/dns': 'off',
-    'node/prefer-promises/fs': 'off',
-    'node/process-exit-as-throw': 'error',
-    'node/shebang': 'off' // do not handle well folders like scripts
+    'n/callback-return': ['error', ['callback', 'cb', 'next']],
+    'n/exports-style': ['error', 'module.exports'],
+    'n/file-extension-in-import': ['error', 'always', {'.js': 'never', '.ts': 'never'}],
+    'n/global-require': 'off',
+    'n/handle-callback-err': 'off',
+    'n/no-callback-literal': 'error',
+    'n/no-deprecated-api': 'error',
+    'n/no-exports-assign': 'error',
+    'n/no-extraneous-import': 'error',
+    'n/no-extraneous-require': 'error',
+    'n/no-missing-import': 'off',
+    'n/no-missing-require': 'error',
+    'n/no-mixed-requires': 'off',
+    'n/no-new-require': 'off',
+    'n/no-path-concat': 'off',
+    'n/no-process-env': 'off',
+    'n/no-process-exit': 'off',
+    'n/no-restricted-import': 'off',
+    'n/no-restricted-require': 'off',
+    'n/no-sync': 'off',
+    'n/no-unpublished-bin': 'off',
+    'n/no-unpublished-import': 'off',
+    'n/no-unpublished-require': 'off',
+    'n/no-unsupported-features/es-builtins': 'error',
+    'n/no-unsupported-features/es-syntax': ['error', {ignores: ['modules']}],
+    'n/no-unsupported-features/node-builtins': 'error',
+    'n/prefer-global/buffer': 'error',
+    'n/prefer-global/console': 'error',
+    'n/prefer-global/process': 'error',
+    'n/prefer-global/text-decoder': 'error',
+    'n/prefer-global/text-encoder': 'error',
+    'n/prefer-global/url': 'error',
+    'n/prefer-global/url-search-params': 'error',
+    'n/prefer-promises/dns': 'off',
+    'n/prefer-promises/fs': 'off',
+    'n/process-exit-as-throw': 'error',
+    'n/shebang': 'off'
   },
+
   settings: {
-    node: {tryExtensions: ['.js', '.cjs', '.mjs', '.json', '.node', '.yml', '.yaml']},
-    'import/resolver': {
-      node: {extensions: ['.js', '.cjs', '.mjs', '.json', '.node', '.yml', '.yaml']}
+    node: {
+      tryExtensions: EXTENSIONS
     },
-    'import/extensions': ['.js', '.cjs', '.mjs', '.jsx', '.json', '.node', '.yml', '.yaml'],
+    'import/resolver': {
+      node: {
+        extensions: EXTENSIONS
+      },
+      typescript: true
+    },
+    'import/extensions': EXTENSIONS,
     'import/ignore': ['node_modules', '\\.(coffee|scss|css|less|hbs|svg|json)$']
   },
   overrides: [
