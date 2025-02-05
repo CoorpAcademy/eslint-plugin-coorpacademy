@@ -6,6 +6,7 @@ module.exports = {
   rules: {
     'mocha/handle-done-callback': 'error',
     'mocha/max-top-level-suites': 'off',
+    'mocha/consistent-spacing-between-blocks': 'error',
     'mocha/no-async-describe': 'error',
     'mocha/no-empty-description': 'error',
     'mocha/no-exclusive-tests': 'error',

@@ -104,6 +104,11 @@ module.exports = {
     'react/state-in-constructor': ['error', 'always'],
     'react/static-property-placement': 'error',
     'react/style-prop-object': 'error',
-    'react/void-dom-elements-no-children': 'error'
+    'react/void-dom-elements-no-children': 'error',
+
+    // new rules
+    'react/checked-requires-onchange-or-readonly': 'off',
+    'react/forward-ref-uses-ref': 'off',
+    'react/jsx-props-no-spread-multi': 'off'
   }
 };
