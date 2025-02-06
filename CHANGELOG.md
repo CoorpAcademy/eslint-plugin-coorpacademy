@@ -2,6 +2,18 @@
 
 Here is list of rules modifications. (starting from v9)
 
+
+## 15
+[15.0.0](https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/releases/tag/v15.0.0)
+### Added
+  - new rules from plugin updates (see 8a78237)
+  - add mocha/consistent-spacing-between-blocks
+  - react rules (`react/checked-requires-onchange-or-readonly`,  `react/forward-ref-uses-ref`, `react/jsx-props-no-spread-multi`) not activated so far
+### Changed
+- Node 20 minimal
+- Prettier bumped, reformat to be expected
+
+
 ## 14
 [14.0.0](https://github.com/CoorpAcademy/eslint-plugin-coorpacademy/releases/tag/v14.0.0)
 Activated rules:
