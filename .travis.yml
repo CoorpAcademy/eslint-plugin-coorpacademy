@@ -1,6 +1,6 @@
 language: node_js
 dist: jammy
-node_js: 16
+node_js: 20
 cache: npm
 
 stages:
@@ -16,12 +16,12 @@ jobs:
 
     - &test
       stage: test
-      name: test-plugin-node16
+      name: test-plugin-node20
       script: npm run test:unit
-      node_js: 16
+      node_js: 20
     - <<: *test
-      name: test-plugin-node18
-      node_js: 18
+      name: test-plugin-node22
+      node_js: 22
 
     - &find-missing
       stage: find-missing
